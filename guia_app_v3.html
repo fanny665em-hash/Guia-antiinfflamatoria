@@ -1,0 +1,2297 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guía Antiinflamatoria — Fanny</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --g1:#1a3d2b;--g2:#2d6a4f;--g3:#52b788;--g4:#95d5b2;--g5:#d8f3dc;--g6:#f0fff4;
+  --p1:#3d1a6e;--p2:#6b3fa0;--p3:#9b72cf;--p4:#d4b8f0;--p5:#f0e8ff;
+  --a1:#c25d00;--a2:#e07b20;--a3:#f4a340;--a5:#fff4dc;
+  --b1:#0d3b6e;--b2:#1565c0;--b3:#4a9edd;--b4:#b3d9f5;--b5:#e8f4fd;
+  --t1:#004d40;--t2:#00695c;--t3:#26a69a;--t4:#b2dfdb;--t5:#e0f2f1;
+  --r1:#b71c1c;--r2:#e53935;--r3:#ef9a9a;--r5:#ffebee;
+  --text:#1a2e1e;--muted:#5a7a62;--bg:#f4f9f5;--white:#ffffff;
+  --radius:18px;--shadow:0 4px 20px rgba(45,106,79,0.10);
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(--text);min-height:100vh}
+
+/* HERO */
+.hero{background:var(--g1);background-image:radial-gradient(ellipse at 100% 0%,rgba(82,183,136,0.3) 0%,transparent 50%);padding:44px 24px 32px;text-align:center;position:relative;overflow:hidden}
+.hero::after{content:'';position:absolute;bottom:-2px;left:0;right:0;height:22px;background:var(--bg);border-radius:20px 20px 0 0}
+.hero-emoji{font-size:48px;display:block;margin-bottom:12px;animation:float 3s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+.hero h1{font-family:'Fraunces',serif;font-size:28px;color:white;margin-bottom:6px}
+.hero-sub{color:var(--g4);font-size:13px;font-weight:300;margin-bottom:14px}
+.hero-pills{display:flex;gap:7px;justify-content:center;flex-wrap:wrap}
+.pill{background:rgba(255,255,255,0.12);color:var(--g5);font-size:11px;font-weight:600;padding:4px 12px;border-radius:20px;border:1px solid rgba(255,255,255,0.15)}
+
+/* NAV */
+.nav{display:flex;background:var(--white);border-bottom:1px solid rgba(45,106,79,0.08);overflow-x:auto;scrollbar-width:none;position:sticky;top:0;z-index:200;box-shadow:0 2px 12px rgba(0,0,0,0.06)}
+.nav::-webkit-scrollbar{display:none}
+.nav-btn{padding:12px 16px;font-size:11px;font-weight:600;color:var(--muted);cursor:pointer;border-bottom:3px solid transparent;white-space:nowrap;flex-shrink:0;transition:all 0.2s;font-family:'Plus Jakarta Sans',sans-serif;background:none;border-top:none;border-left:none;border-right:none;display:flex;flex-direction:column;align-items:center;gap:2px}
+.nav-btn .ni{font-size:17px}
+.nav-btn.active{color:var(--g2);border-bottom-color:var(--g3)}
+
+/* PAGES */
+.page{display:none;padding:18px 15px 80px;max-width:680px;margin:0 auto}
+.page.active{display:block;animation:fadeIn 0.25s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+
+/* TYPOGRAPHY */
+.big-title{font-family:'Fraunces',serif;font-size:24px;color:var(--g1);margin:24px 0 4px;line-height:1.2}
+.big-sub{font-size:13px;color:var(--muted);margin-bottom:18px}
+.sec-hdr{margin:22px 0 14px;display:flex;align-items:center;gap:10px}
+.sec-dot{width:9px;height:9px;border-radius:50%;background:var(--g3);flex-shrink:0}
+.sec-ttl{font-family:'Fraunces',serif;font-size:19px;color:var(--g1)}
+
+/* CARDS */
+.card{background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;margin-bottom:12px;transition:transform 0.15s}
+.card:active{transform:scale(0.99)}
+.cband{height:4px;background:linear-gradient(90deg,var(--g2),var(--g3))}
+.cband.p{background:linear-gradient(90deg,var(--p1),var(--p3))}
+.cband.a{background:linear-gradient(90deg,var(--a1),var(--a3))}
+.cband.b{background:linear-gradient(90deg,var(--b1),var(--b3))}
+.cband.t{background:linear-gradient(90deg,var(--t1),var(--t3))}
+.cband.r{background:linear-gradient(90deg,var(--r1),var(--r3))}
+.c-head{padding:14px 16px 0;display:flex;align-items:flex-start;gap:12px}
+.c-icon{font-size:26px;flex-shrink:0}
+.c-title{font-family:'Fraunces',serif;font-size:16px;color:var(--g1);margin-bottom:2px}
+.c-sub{font-size:12px;color:var(--muted)}
+.c-body{padding:11px 16px 14px}
+
+/* ITEMS */
+.item{background:var(--g6);border-radius:11px;padding:9px 13px;margin-bottom:7px;font-size:13px;line-height:1.55;border-left:3px solid var(--g3)}
+.item:last-child{margin-bottom:0}
+.item.p{background:var(--p5);border-left-color:var(--p3)}
+.item.a{background:var(--a5);border-left-color:var(--a3)}
+.item.b{background:var(--b5);border-left-color:var(--b3)}
+.item.t{background:var(--t5);border-left-color:var(--t3)}
+.item.r{background:var(--r5);border-left-color:var(--r2)}
+.ilabel{font-weight:700;font-size:10px;text-transform:uppercase;letter-spacing:0.8px;color:var(--g2);display:block;margin-bottom:2px}
+.item.p .ilabel{color:var(--p2)}.item.a .ilabel{color:var(--a1)}.item.b .ilabel{color:var(--b2)}.item.t .ilabel{color:var(--t2)}.item.r .ilabel{color:var(--r1)}
+
+/* ALERT */
+.alert{background:var(--a5);border-left:4px solid var(--a2);border-radius:13px;padding:13px 15px;margin:10px 0;font-size:13px;line-height:1.55;color:#5a3000}
+.alert strong{color:var(--a1)}
+.alert.g{background:var(--g5);border-left-color:var(--g3);color:var(--g1)}
+.alert.g strong{color:var(--g2)}
+.alert.p{background:var(--p5);border-left-color:var(--p3);color:var(--p1)}
+.alert.p strong{color:var(--p2)}
+
+/* TABLE */
+.tbl-wrap{background:white;border-radius:13px;overflow:hidden;box-shadow:var(--shadow);margin:8px 0}
+.tbl{width:100%;border-collapse:collapse;font-size:12px}
+.tbl th{background:var(--g2);color:white;padding:8px 9px;text-align:left;font-weight:600}
+.tbl td{padding:7px 9px;border-bottom:1px solid rgba(45,106,79,0.06);color:var(--text)}
+.tbl tr:nth-child(even) td{background:var(--g6)}
+.tbl tr:last-child td{border-bottom:none}
+.tbl.p th{background:var(--p2)}.tbl.a th{background:var(--a1)}.tbl.t th{background:var(--t2)}
+
+/* TAGS */
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:9px}
+.tag{font-size:11px;font-weight:600;padding:3px 10px;border-radius:18px;background:var(--g5);color:var(--g2)}
+.tag.p{background:var(--p5);color:var(--p2)}.tag.a{background:var(--a5);color:var(--a1)}.tag.b{background:var(--b5);color:var(--b2)}.tag.t{background:var(--t5);color:var(--t2)}
+
+/* COLLAPSE */
+.col-btn{width:100%;background:white;border:none;border-radius:var(--radius);padding:14px 16px;display:flex;align-items:center;gap:12px;cursor:pointer;text-align:left;box-shadow:var(--shadow);margin-bottom:9px;font-family:'Plus Jakarta Sans',sans-serif;transition:transform 0.15s}
+.col-btn:active{transform:scale(0.99)}
+.col-icon{font-size:22px;flex-shrink:0}
+.col-text{flex:1}
+.col-title{font-weight:700;font-size:14px;color:var(--g1)}
+.col-sub{font-size:11px;color:var(--muted);margin-top:1px}
+.col-arr{color:var(--g3);font-size:16px;transition:transform 0.25s}
+.col-btn.open .col-arr{transform:rotate(180deg)}
+.col-body{display:none;background:white;border-radius:0 0 var(--radius) var(--radius);padding:0 16px 16px;margin-top:-9px;margin-bottom:9px;box-shadow:0 8px 20px rgba(45,106,79,0.07)}
+.col-body.open{display:block;animation:slideD 0.22s ease}
+@keyframes slideD{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
+
+/* CHECKLIST */
+.chk-list{background:white;border-radius:var(--radius);padding:14px;box-shadow:var(--shadow)}
+.chk-item{display:flex;gap:11px;padding:9px 0;border-bottom:1px solid rgba(45,106,79,0.05);font-size:13px;line-height:1.5;align-items:flex-start}
+.chk-item:last-child{border-bottom:none;padding-bottom:0}
+.chk-box{width:23px;height:23px;border:2px solid var(--g3);border-radius:6px;flex-shrink:0;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all 0.2s;margin-top:1px}
+.chk-box.done{background:var(--g2);border-color:var(--g2)}
+.chk-box.done::after{content:'✓';color:white;font-size:13px;font-weight:700}
+.chk-label strong{color:var(--g2)}
+
+/* ALARM */
+.alarm-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.alarm-card{background:white;border-radius:15px;padding:14px;box-shadow:var(--shadow);text-align:center;border-bottom:3px solid var(--g3)}
+.alarm-card:nth-child(2){border-bottom-color:var(--p3)}
+.alarm-card:nth-child(3){border-bottom-color:var(--b3)}
+.alarm-card:nth-child(4){border-bottom-color:var(--t3)}
+.alarm-card:nth-child(5){border-bottom-color:var(--a3);grid-column:1/-1}
+.alarm-emoji{font-size:18px;margin-bottom:5px;display:block}
+.alarm-hora{font-family:'Fraunces',serif;font-size:26px;font-weight:900;color:var(--g2);line-height:1}
+.alarm-card:nth-child(2) .alarm-hora{color:var(--p2)}
+.alarm-card:nth-child(3) .alarm-hora{color:var(--b2)}
+.alarm-card:nth-child(4) .alarm-hora{color:var(--t2)}
+.alarm-card:nth-child(5) .alarm-hora{color:var(--a1)}
+.alarm-name{font-size:11px;font-weight:700;color:var(--text);margin-top:3px;text-transform:uppercase;letter-spacing:0.4px}
+
+/* DARK CARD */
+.dark-card{background:var(--g1);background-image:radial-gradient(ellipse at 80% 20%,rgba(82,183,136,0.2) 0%,transparent 50%);border-radius:var(--radius);padding:18px;margin-bottom:12px}
+.dc-title{font-family:'Fraunces',serif;font-size:17px;color:white;margin-bottom:12px}
+.dc-item{display:flex;gap:10px;margin-bottom:12px;align-items:flex-start}
+.dc-num{width:28px;height:28px;border-radius:50%;background:var(--g3);color:white;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+.dc-text{font-size:14px;line-height:1.6;color:var(--text)}
+.dark-card .dc-text{color:rgba(255,255,255,0.92)}
+.dark-card .dc-text strong{color:white;font-weight:700}
+.dark-card .dc-num{background:var(--g3)}
+.dc-res{background:rgba(82,183,136,0.25);border-radius:11px;padding:12px 14px;font-size:13px;color:white;text-align:center;font-style:italic;margin-top:8px;border:1px solid rgba(82,183,136,0.3)}
+
+/* STATS */
+.stats-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:8px 0}
+.stat-card{background:white;border-radius:15px;padding:14px;box-shadow:var(--shadow);text-align:center}
+.stat-num{font-family:'Fraunces',serif;font-size:30px;font-weight:900;color:var(--g2);line-height:1}
+.stat-label{font-size:11px;color:var(--muted);margin-top:3px;font-weight:500}
+
+/* PROG */
+.prog-bar{background:var(--g5);border-radius:20px;height:7px;overflow:hidden;margin:5px 0}
+.prog-fill{height:100%;border-radius:20px;background:linear-gradient(90deg,var(--g2),var(--g3));transition:width 0.5s ease}
+
+/* ═══════════════════════════════════
+   RECETAS — SISTEMA DE CATEGORIAS
+═══════════════════════════════════ */
+.cat-tabs{display:flex;gap:8px;margin:14px 0 18px;overflow-x:auto;scrollbar-width:none;padding-bottom:4px}
+.cat-tabs::-webkit-scrollbar{display:none}
+.cat-btn{padding:8px 16px;border-radius:20px;border:2px solid var(--g3);background:white;color:var(--g2);font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:12px;cursor:pointer;white-space:nowrap;flex-shrink:0;transition:all 0.2s}
+.cat-btn.active{background:var(--g2);color:white;border-color:var(--g2)}
+.cat-btn.active.p{background:var(--p2);border-color:var(--p2)}
+.cat-btn.active.a{background:var(--a1);border-color:var(--a1)}
+.cat-btn.active.t{background:var(--t2);border-color:var(--t2)}
+.cat-section{display:none}
+.cat-section.active{display:block}
+
+.receta{background:white;border-radius:var(--radius);overflow:hidden;margin-bottom:13px;box-shadow:var(--shadow)}
+.r-head{padding:13px 16px;display:flex;align-items:center;gap:11px}
+.r-emoji{font-size:24px}
+.r-nombre{font-family:'Fraunces',serif;font-size:15px;color:white;flex:1}
+.r-tiempo{background:rgba(255,255,255,0.22);color:white;font-size:11px;font-weight:600;padding:3px 9px;border-radius:9px;white-space:nowrap}
+.r-body{padding:12px 16px 14px}
+.r-ing{background:var(--g6);border-radius:9px;padding:9px 12px;margin-bottom:9px;font-size:12px;line-height:1.65}
+.r-ing-label{font-weight:700;font-size:10px;color:var(--g2);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:3px;display:block}
+.r-paso{font-size:13px;line-height:1.65;color:var(--text);margin-bottom:7px}
+.r-nota{background:var(--a5);border-radius:8px;padding:7px 11px;font-size:11px;color:#5a3000;font-style:italic;margin-top:7px}
+.r-badge{display:inline-flex;align-items:center;gap:4px;font-size:10px;font-weight:700;padding:2px 9px;border-radius:8px;background:var(--g5);color:var(--g2);margin-bottom:8px}
+.r-badge.tdah{background:var(--p5);color:var(--p2)}
+.r-badge.rapido{background:var(--a5);color:var(--a1)}
+.r-badge.batch{background:var(--b5);color:var(--b2)}
+.r-badge.prebiotico{background:var(--t5);color:var(--t2)}
+
+/* SHOPPING */
+.shop-tabs{display:flex;gap:8px;margin:14px 0}
+.shop-btn{flex:1;padding:9px;border-radius:11px;border:2px solid var(--g3);font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:12px;cursor:pointer;transition:all 0.2s}
+
+/* BATCH COOKING */
+.batch-tabs{display:flex;gap:8px;margin:14px 0 18px;overflow-x:auto;scrollbar-width:none}
+.batch-tabs::-webkit-scrollbar{display:none}
+.batch-tab{padding:8px 16px;border-radius:20px;border:2px solid var(--g3);background:white;color:var(--g2);font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:12px;cursor:pointer;white-space:nowrap;flex-shrink:0;transition:all 0.2s}
+.batch-tab.active{background:var(--g2);color:white;border-color:var(--g2)}
+.batch-sec{display:none}
+.batch-sec.active{display:block}
+
+.timeline{position:relative;padding-left:32px;margin-top:8px}
+.timeline::before{content:'';position:absolute;left:12px;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,var(--g2),var(--g3),var(--g5));border-radius:2px}
+.tl-item{position:relative;margin-bottom:14px}
+.tl-dot{position:absolute;left:-25px;top:10px;width:14px;height:14px;border-radius:50%;background:var(--g2);border:2px solid white;box-shadow:0 0 0 2px var(--g2)}
+.tl-dot.parallel{background:var(--b2);box-shadow:0 0 0 2px var(--b2)}
+.tl-dot.done{background:var(--g3);box-shadow:0 0 0 2px var(--g3)}
+.tl-card{background:white;border-radius:13px;padding:11px 14px;box-shadow:var(--shadow)}
+.tl-header{display:flex;align-items:center;gap:9px;margin-bottom:6px}
+.bc-check{width:26px;height:26px;border:2px solid var(--g3);border-radius:7px;flex-shrink:0;margin-left:auto;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.2s;background:white}
+.bc-check.done{background:var(--g2);border-color:var(--g2)}
+.bc-check.done::after{content:'✓';color:white;font-size:14px;font-weight:700}
+.tl-card.done-card{opacity:0.6}
+.tl-card.done-card .tl-name{text-decoration:line-through;color:var(--muted)}
+.tl-min{font-size:10px;font-weight:700;padding:2px 9px;border-radius:8px;white-space:nowrap}
+.tl-min.start{background:var(--g5);color:var(--g2)}
+.tl-min.parallel{background:var(--b5);color:var(--b2)}
+.tl-min.finish{background:var(--a5);color:var(--a1)}
+.tl-name{font-weight:700;font-size:14px;color:var(--text);flex:1}
+.tl-electro{display:inline-block;background:#f0f0f0;color:#555;font-size:10px;font-weight:600;padding:2px 8px;border-radius:7px;margin-top:5px}
+.tl-desc{font-size:13px;color:#444;line-height:1.6}
+.tl-result{background:var(--g5);border-radius:8px;padding:7px 11px;font-size:12px;color:var(--g2);font-weight:600;margin-top:7px}
+
+.electro-map{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:8px}
+.em-card{background:white;border-radius:13px;padding:12px;box-shadow:var(--shadow);border-top:3px solid var(--g3)}
+.em-card.p{border-top-color:var(--p3)}.em-card.b{border-top-color:var(--b3)}.em-card.t{border-top-color:var(--t3)}.em-card.a{border-top-color:var(--a3)}
+.em-emoji{font-size:22px;margin-bottom:5px;display:block}
+.em-name{font-weight:700;font-size:12px;color:var(--text);margin-bottom:3px}
+.em-uso{font-size:11px;color:var(--muted);line-height:1.5}
+.em-tag{display:inline-block;background:var(--g5);color:var(--g2);font-size:10px;font-weight:700;padding:2px 8px;border-radius:7px;margin-top:6px}
+.em-card.p .em-tag{background:var(--p5);color:var(--p2)}.em-card.b .em-tag{background:var(--b5);color:var(--b2)}.em-card.t .em-tag{background:var(--t5);color:var(--t2)}.em-card.a .em-tag{background:var(--a5);color:var(--a1)}
+
+.summary-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:8px}
+.sum-card{background:white;border-radius:13px;padding:12px;box-shadow:var(--shadow);text-align:center}
+.sum-num{font-family:'Fraunces',serif;font-size:26px;font-weight:900;color:var(--g2);line-height:1}
+.sum-label{font-size:11px;color:var(--muted);margin-top:3px}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <span class="hero-emoji">🌿</span>
+  <h1>Guía Antiinflamatoria<br>para Fanny</h1>
+  <p class="hero-sub">Todo lo que necesitás, organizado para tu cerebro TDAH</p>
+  <div class="hero-pills">
+    <span class="pill">@nutricion.sonia</span>
+    <span class="pill">TDAH-friendly</span>
+    <span class="pill">Villa Gesell</span>
+  </div>
+</div>
+
+<nav class="nav">
+  <button class="nav-btn active" onclick="show('inicio')"><span class="ni">🏠</span>Inicio</button>
+  <button class="nav-btn" onclick="show('manana')"><span class="ni">🌅</span>Mañana</button>
+  <button class="nav-btn" onclick="show('tdah')"><span class="ni">🧠</span>TDAH</button>
+  <button class="nav-btn" onclick="show('pilares')"><span class="ni">🌱</span>Pilares</button>
+  <button class="nav-btn" onclick="show('protocolo')"><span class="ni">🔄</span>Protocolo</button>
+  <button class="nav-btn" onclick="show('alimentos')"><span class="ni">🥗</span>Alimentos</button>
+  <button class="nav-btn" onclick="show('recetas')"><span class="ni">👩‍🍳</span>Recetas</button>
+  <button class="nav-btn" onclick="show('bebidas')"><span class="ni">🫖</span>Bebidas</button>
+  <button class="nav-btn" onclick="show('fermentos')"><span class="ni">🫙</span>Fermentos</button>
+  <button class="nav-btn" onclick="show('glucemia')"><span class="ni">📊</span>Glucemia</button>
+  <button class="nav-btn" onclick="show('habitos')"><span class="ni">✨</span>Hábitos</button>
+  <button class="nav-btn" onclick="show('batch')"><span class="ni">🍳</span>Batch</button>
+  <button class="nav-btn" onclick="show('compras')"><span class="ni">🛒</span>Compras</button>
+</nav>
+
+<!-- ══ INICIO ══ -->
+<div id="page-inicio" class="page active">
+  <div class="alert g" style="margin-top:18px"><strong>Para el TDAH:</strong> No leas todo de una vez. Elegí UNA pestaña y leé lo que necesitás en ese momento.</div>
+
+  <div class="big-title">Por dónde empezar</div>
+  <div class="card">
+    <div class="cband"></div>
+    <div class="c-head"><span class="c-icon">🔑</span><div><div class="c-title">Las 3 cosas más importantes</div><div class="c-sub">Si solo hacés estas 3 cosas, ya estás en camino</div></div></div>
+    <div class="c-body">
+      <div class="item"><span class="ilabel">Hoy</span>1 cda de chía o lino MOLIDOS en el desayuno — omega 3 cubierto</div>
+      <div class="item"><span class="ilabel">Esta semana</span>Enfriar el arroz o la papa antes de comerlos — ya son prebióticos</div>
+      <div class="item"><span class="ilabel">Siempre</span>Nunca hidratos solos — siempre con proteína + grasa + fibra</div>
+    </div>
+  </div>
+
+  <div class="stats-grid">
+    <div class="stat-card"><div class="stat-num">90%</div><div class="stat-label">serotonina en el intestino</div></div>
+    <div class="stat-card"><div class="stat-num">5R</div><div class="stat-label">pasos para reiniciar el intestino</div></div>
+    <div class="stat-card"><div class="stat-num">30</div><div class="stat-label">plantas distintas por semana</div></div>
+    <div class="stat-card"><div class="stat-num">4hs</div><div class="stat-label">mínimo para almidón resistente</div></div>
+  </div>
+
+  <div class="sec-hdr"><div class="sec-dot" style="background:var(--p3)"></div><div class="sec-ttl" style="color:var(--p1)">Tu intestino produce</div></div>
+  <div class="tbl-wrap">
+    <table class="tbl">
+      <tr><th>Sustancia</th><th>Qué afecta en vos</th></tr>
+      <tr><td>Serotonina (90-95%)</td><td>Ánimo, sueño, energía</td></tr>
+      <tr><td>Dopamina</td><td>Concentración — CLAVE TDAH</td></tr>
+      <tr><td>GABA</td><td>Calma la ansiedad</td></tr>
+      <tr><td>Acetilcolina</td><td>Memoria y foco</td></tr>
+      <tr><td>Melatonina</td><td>Calidad del sueño</td></tr>
+    </table>
+  </div>
+
+  <div class="sec-hdr"><div class="sec-dot"></div><div class="sec-ttl">🍽️ La estructura del plato completo</div></div>
+  <div class="card"><div class="cband"></div><div class="c-body" style="padding-top:14px">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px">
+      <div style="background:var(--g5);border-radius:12px;padding:12px;text-align:center">
+        <div style="font-size:22px;margin-bottom:4px">🥦🥕🍅</div>
+        <div style="font-family:'Fraunces',serif;font-size:20px;color:var(--g2);font-weight:900">30%</div>
+        <div style="font-size:11px;color:var(--muted);font-weight:600">Frutas y vegetales</div>
+      </div>
+      <div style="background:var(--b5);border-radius:12px;padding:12px;text-align:center">
+        <div style="font-size:22px;margin-bottom:4px">🫘🥚🐟</div>
+        <div style="font-family:'Fraunces',serif;font-size:20px;color:var(--b2);font-weight:900">25%</div>
+        <div style="font-size:11px;color:var(--muted);font-weight:600">Proteínas</div>
+      </div>
+      <div style="background:var(--a5);border-radius:12px;padding:12px;text-align:center">
+        <div style="font-size:22px;margin-bottom:4px">🌾🍚🫘</div>
+        <div style="font-family:'Fraunces',serif;font-size:20px;color:var(--a1);font-weight:900">25%</div>
+        <div style="font-size:11px;color:var(--muted);font-weight:600">Granos enteros</div>
+      </div>
+      <div style="background:var(--p5);border-radius:12px;padding:12px;text-align:center">
+        <div style="font-size:22px;margin-bottom:4px">🥑🫒🌰</div>
+        <div style="font-family:'Fraunces',serif;font-size:20px;color:var(--p2);font-weight:900">20%</div>
+        <div style="font-size:11px;color:var(--muted);font-weight:600">Grasas buenas</div>
+      </div>
+    </div>
+    <div class="alert g"><strong>El orden importa:</strong> Primero los vegetales → después la proteína → al final los hidratos. Este orden solo ya reduce la curva de glucemia sin cambiar nada más.</div>
+  </div></div>
+
+</div>
+
+<!-- ══ MAÑANA ══ -->
+<div id="page-manana" class="page">
+  <div class="big-title">La Mañana TDAH</div>
+  <div class="big-sub">Sin función ejecutiva, sin dopamina — sin problema</div>
+  <div class="alert p"><strong>La regla de oro:</strong> Si a la mañana tenés que DECIDIR algo → ya perdiste. Todo se decide la noche anterior.</div>
+
+  <!-- MEDICACION -->
+  <div class="sec-hdr"><div class="sec-dot" style="background:var(--r2)"></div><div class="sec-ttl" style="color:var(--r1)">⚠️ No podés tomar la medicación con el estómago vacío</div></div>
+  <div class="dark-card" style="background:linear-gradient(135deg,#4a148c,#7b1fa2)">
+    <div class="dc-title">💊 El orden correcto para vos</div>
+    <div class="dc-item"><div class="dc-num">1</div><div class="dc-text"><strong>Alarma suena</strong> → agua</div></div>
+    <div class="dc-item"><div class="dc-num">2</div><div class="dc-text"><strong>Algo pequeño</strong> → 2-3 dátiles o nueces que están AL LADO de la medicación en la mesita de noche</div></div>
+    <div class="dc-item"><div class="dc-num">3</div><div class="dc-text"><strong>Medicación</strong> → tomar inmediatamente después del bocado pequeño</div></div>
+    <div class="dc-item"><div class="dc-num">4</div><div class="dc-text"><strong>Esperar 20-30 min</strong> → mientras te levantás, te higienizás, llegás a la cocina</div></div>
+    <div class="dc-item"><div class="dc-num">5</div><div class="dc-text"><strong>Desayuno completo proteico</strong> → ya está en la heladera, 0 preparación</div></div>
+    <div class="dc-res">🧠 El bocado pequeño activa el estómago. La medicación actúa cuando el desayuno completo ya está adentro.</div>
+  </div>
+
+  <div class="sec-hdr"><div class="sec-dot" style="background:var(--r2)"></div><div class="sec-ttl" style="color:var(--r1)">Qué poner al lado de la medicación — elegir UNO</div></div>
+  <div class="card"><div class="cband r"></div><div class="c-body" style="padding-top:12px">
+    <div class="item r"><span class="ilabel">⭐ Opción A — 2-3 dátiles</span>La más fácil. Dejar los dátiles en un frasquito pequeño AL LADO de la medicación en la mesita de noche. Sin ir a la cocina, sin moverse.</div>
+    <div class="item r"><span class="ilabel">Opción B — 5 nueces o castañas de cajú</span>La bolsita de la cartera también puede estar al lado de la cama. Sin preparación.</div>
+    <div class="item r"><span class="ilabel">Opción C — 1 cuadradito chocolate 70%</span>Si tolerás algo pequeño y dulce. Rápido, 0 decisión.</div>
+    <div class="item r"><span class="ilabel">Opción D — 2 cdas del chía pudding</span>Si el frasco está accesible. Tomar 2 cucharadas, medicación, volver a guardar y terminar 20 min después.</div>
+    <div class="alert" style="margin-top:10px"><strong>Lo que NO antes de la medicación:</strong> Nada muy ácido solo (naranja, limón), nada que requiera cocinar o ir a la cocina — si hay fricción, no va a pasar.</div>
+  </div></div>
+
+  <!-- SECUENCIA -->
+  <div class="sec-hdr"><div class="sec-dot"></div><div class="sec-ttl">La secuencia completa — sin función ejecutiva</div></div>
+  <div class="dark-card">
+    <div class="dc-title">🌅 6 pasos automáticos</div>
+    <div class="dc-item"><div class="dc-num">1</div><div class="dc-text"><strong>Alarma suena</strong> → agarrar el teléfono. No silenciarla hasta levantarse.</div></div>
+    <div class="dc-item"><div class="dc-num">2</div><div class="dc-text"><strong>Vaso de agua</strong> → al lado de la cama, tomarlo antes de levantarse.</div></div>
+    <div class="dc-item"><div class="dc-num">3</div><div class="dc-text"><strong>Bocado pequeño + medicación</strong> → dátiles o nueces al lado de la medicación. Comer, tomar pastilla.</div></div>
+    <div class="dc-item"><div class="dc-num">4</div><div class="dc-text"><strong>Levantarse e higiene</strong> → estos 20-30 min son el tiempo de espera de la medicación.</div></div>
+    <div class="dc-item"><div class="dc-num">5</div><div class="dc-text"><strong>Desayuno completo</strong> → sacar de la heladera. Comer. 0 preparación.</div></div>
+    <div class="dc-item"><div class="dc-num">6</div><div class="dc-text"><strong>Semillas molidas encima</strong> → el frasco está VISIBLE al lado del desayuno. Una cucharada.</div></div>
+    <div class="dc-res">☀️ Medicación con estómago protegido + desayuno proteico + omega 3. El mejor arranque posible para un cerebro TDAH.</div>
+  </div>
+
+  <!-- ALARMAS -->
+  <div class="sec-hdr"><div class="sec-dot"></div><div class="sec-ttl">Alarmas — hacer AHORA</div></div>
+  <div class="alarm-grid">
+    <div class="alarm-card"><span class="alarm-emoji">☀️</span><div class="alarm-hora">8:00</div><div class="alarm-name">Despertar + medicación</div></div>
+    <div class="alarm-card"><span class="alarm-emoji">🍳</span><div class="alarm-hora">8:30</div><div class="alarm-name">Desayuno completo</div></div>
+    <div class="alarm-card"><span class="alarm-emoji">🍎</span><div class="alarm-hora">11:00</div><div class="alarm-name">Media mañana</div></div>
+    <div class="alarm-card"><span class="alarm-emoji">🥗</span><div class="alarm-hora">13:30</div><div class="alarm-name">Almuerzo</div></div>
+    <div class="alarm-card"><span class="alarm-emoji">🍵</span><div class="alarm-hora">17:00</div><div class="alarm-name">Merienda</div></div>
+    <div class="alarm-card"><span class="alarm-emoji">🌙</span><div class="alarm-hora">20:00</div><div class="alarm-name">Cena</div></div>
+  </div>
+  <div class="alert g" style="margin-top:10px"><strong>Ahora son 6 alarmas.</strong> La de las 8hs = despertar + bocado + medicación. La de las 8:30hs = desayuno completo.</div>
+
+  <!-- DESAYUNOS -->
+  <div class="sec-hdr"><div class="sec-dot"></div><div class="sec-ttl">Los desayunos — elegir UNO y repetir toda la semana</div></div>
+
+  <div class="card"><div class="cband p"></div>
+    <div class="c-head"><span class="c-icon">🫙</span><div><div class="c-title">Chía pudding rico — la versión que da ganas de comer</div><div class="c-sub">0 minutos a la mañana — preparar la noche anterior</div></div></div>
+    <div class="c-body">
+      <div class="item p"><span class="ilabel">⭐ Base chocolate (la más adictiva)</span>150ml leche de COCO + 1 cda chía MOLIDA + 1 cdita cacao amargo + pizca de canela + pizca de sal marina → frasco → heladera. A la mañana: banana en rodajas + pasta de maní en hilo + nueces.</div>
+      <div class="item p"><span class="ilabel">Base tropical</span>150ml leche de coco + 1 cda chía molida + pizca de canela + unas gotas de vainilla → frasco → heladera. A la mañana: frutos rojos congelados (se descongelan solos) + coco rallado + nueces.</div>
+      <div class="item p"><span class="ilabel">Base caramel</span>150ml leche de almendras + 1 cda chía molida + 1 cda pasta de dátiles mezclada dentro → frasco → heladera. A la mañana: castañas de cajú picadas + coco rallado.</div>
+      <div class="alert p" style="margin-top:10px"><strong>El secreto:</strong> Chía MOLIDA (no entera) → queda cremoso sin granitos. La sal marina realza todos los sabores. La leche de coco lo hace parecido a un postre real.</div>
+    </div>
+  </div>
+
+  <div class="card"><div class="cband"></div>
+    <div class="c-head"><span class="c-icon">🍳</span><div><div class="c-title">Pan de lino y huevo</div><div class="c-sub">2 minutos a la mañana — mezcla preparada la noche anterior</div></div></div>
+    <div class="c-body">
+      <div class="item"><span class="ilabel">La noche anterior</span>Bol + 2 cdas lino molido + 1 huevo + sal + polvo de hornear + opcional cúrcuma → mezclar → tapar → heladera.</div>
+      <div class="item"><span class="ilabel">A la mañana</span>Bol al microondas 2 minutos. Sacar. Palta aplastada encima + tomate cherry + semillas molidas. Comer del mismo bol — 1 sola cosa para lavar.</div>
+    </div>
+  </div>
+
+  <div class="card"><div class="cband b"></div>
+    <div class="c-head"><span class="c-icon">🥤</span><div><div class="c-title">Smoothie proteico</div><div class="c-sub">60 segundos — licuadora en la mesada la noche anterior</div></div></div>
+    <div class="c-body">
+      <div class="item b"><span class="ilabel">La noche anterior</span>Dejar la licuadora Moulinex en la mesada + banana + pasta de maní + chía molida al lado.</div>
+      <div class="item b"><span class="ilabel">A la mañana</span>Leche vegetal + banana + pasta de maní + chía + 1 medida Whey → licuadora 30 seg → tomar directo del vaso.</div>
+    </div>
+  </div>
+
+  <!-- NOCHE -->
+  <div class="sec-hdr"><div class="sec-dot"></div><div class="sec-ttl">Rutina de noche — 5 minutos</div></div>
+  <div class="dark-card">
+    <div class="dc-title">🌙 Antes de dormir — 5 cosas</div>
+    <div class="dc-item"><div class="dc-num">1</div><div class="dc-text"><strong>Vaso de agua</strong> al lado de la cama.</div></div>
+    <div class="dc-item"><div class="dc-num">2</div><div class="dc-text"><strong>Dátiles o nueces + medicación</strong> juntos en la mesita. El bocado al lado de la pastilla = automático.</div></div>
+    <div class="dc-item"><div class="dc-num">3</div><div class="dc-text"><strong>Desayuno completo</strong> en la heladera preparado.</div></div>
+    <div class="dc-item"><div class="dc-num">4</div><div class="dc-text"><strong>Bolsita de cajú + nueces</strong> en la cartera.</div></div>
+    <div class="dc-item"><div class="dc-num">5</div><div class="dc-text"><strong>Vianda</strong> en tupper en la heladera.</div></div>
+    <div class="dc-res">☀️ Mañana: 6 pasos automáticos, 0 decisiones, medicación con el estómago protegido.</div>
+  </div>
+
+</div>
+
+<!-- ══ TDAH ══ -->
+<div id="page-tdah" class="page">
+  <div class="big-title">TDAH + Alimentación</div>
+  <div class="big-sub">Estrategias específicas para tu cerebro</div>
+  <div class="alert p"><strong>El cerebro TDAH</strong> tiene metabolismo de glucosa reducido en la corteza prefrontal. Cada pico glucémico lo empeora directamente.</div>
+
+  <div class="card"><div class="cband p"></div>
+    <div class="c-body" style="padding-top:14px">
+      <div class="item p"><span class="ilabel">1 — Bocado pequeño → medicación → desayuno proteico</span>No podés tomar la medicación con el estómago vacío. Solución: 2-3 dátiles o nueces AL LADO de la medicación en la mesita. Comer → medicación → 20-30 min → desayuno completo con 15-25g proteína.</div>
+      <div class="item p"><span class="ilabel">2 — 6 alarmas</span>8hs despertar+medicación · 8:30hs desayuno completo · 11hs media mañana · 13:30hs almuerzo · 17hs merienda · 20hs cena. Las alarmas hacen el trabajo que el TDAH no puede.</div>
+      <div class="item p"><span class="ilabel">3 — Semillas molidas visibles</span>Frasco ENCIMA del desayuno. Si no lo ves, no lo recordás.</div>
+      <div class="item p"><span class="ilabel">4 — Glucemia estable</span>Proteína + grasa + fibra en cada comida. Nunca hidratos solos.</div>
+      <div class="item p"><span class="ilabel">5 — Sin colorantes artificiales</span>Buscar INS+número o tartrazina en ingredientes.</div>
+      <div class="item p"><span class="ilabel">6 — Castañas de cajú en merienda</span>72mg triptófano/30g → mejora sueño y ánimo nocturno.</div>
+      <div class="item p"><span class="ilabel">7 — Pan de lino y huevo</span>Desayuno TDAH ideal. 2 minutos. Sin decisión. Mezcla la noche anterior.</div>
+    </div>
+  </div>
+
+  <div class="sec-hdr"><div class="sec-dot" style="background:var(--p3)"></div><div class="sec-ttl" style="color:var(--p1)">Nutrientes clave TDAH</div></div>
+  <div class="tbl-wrap">
+    <table class="tbl p">
+      <tr><th>Nutriente</th><th>Rol</th><th>Fuente fácil</th></tr>
+      <tr><td>Omega 3 EPA+DHA</td><td>Concentración y calma</td><td>Chía+lino molidos diario + salmón 2-3x</td></tr>
+      <tr><td>Colina</td><td>Acetilcolina = foco</td><td>2 huevos = 50% dosis diaria</td></tr>
+      <tr><td>Hierro (ferritina)</td><td>Hace dopamina</td><td>Lentejas + limón. NO mate 1hs después</td></tr>
+      <tr><td>Zinc</td><td>Transportador dopamina</td><td>Semillas calabaza activadas</td></tr>
+      <tr><td>Vitamina D</td><td>62% TDAH lo tienen bajo</td><td>Sol 15-20min + salmón + huevos</td></tr>
+      <tr><td>Magnesio</td><td>300 reacciones neurológicas</td><td>Polvo magnesio casero (3 cdas/día)</td></tr>
+      <tr><td>Triptófano</td><td>Serotonina + melatonina</td><td>Castañas cajú 30g en merienda</td></tr>
+      <tr><td>B9 + B12</td><td>Neurotransmisores</td><td>Legumbres + levadura nutricional B12</td></tr>
+    </table>
+  </div>
+
+  <div class="sec-hdr"><div class="sec-dot" style="background:var(--b3)"></div><div class="sec-ttl" style="color:var(--b1)">Tu Whey Protein ✅</div></div>
+  <div class="card"><div class="cband b"></div>
+    <div class="c-body" style="padding-top:12px">
+      <div class="item b"><span class="ilabel">Star Nutrition Platinum Whey — Apto</span>25g proteína · 0g azúcar · Isolate+Hydrolyzed · Sin TACC. Tirosina 2.5g (dopamina) + Glutamina 19.5g (repara intestino) + Triptófano 1.3g.</div>
+      <div class="item b"><span class="ilabel">Smoothie dopaminérgico ideal</span>200ml leche vegetal + 1 banana + 1 cda pasta maní + 1 cda chía molida + 1 medida whey. Licuadora 30 seg. 35-40g proteína total.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ PILARES ══ -->
+<div id="page-pilares" class="page">
+  <div class="big-title">Los 4 Pilares</div>
+  <div class="big-sub">La base de toda la alimentación antiinflamatoria</div>
+
+  <button class="col-btn" onclick="col(this)"><span class="col-icon">🦠</span><div class="col-text"><div class="col-title">Pilar 1 — Prebióticos</div><div class="col-sub">El alimento de tu microbiota</div></div><span class="col-arr">▼</span></button>
+  <div class="col-body">
+    <div class="tbl-wrap"><table class="tbl"><tr><th>Tipo</th><th>Fuentes</th><th>Cómo</th></tr>
+    <tr><td>Almidón resistente</td><td>Papa, batata, arroz, legumbres, banana verde</td><td>Cocinar y enfriar 4-12hs. No superar 130°</td></tr>
+    <tr><td>Mucílagos</td><td>Chía, lino, psyllium</td><td>MOLER antes de hidratar siempre</td></tr>
+    <tr><td>Inulina</td><td>Ajo, cebolla, puerro, espárragos</td><td>Crudos o cocidos</td></tr>
+    <tr><td>Betaglucanos</td><td>Avena, cebada, champignones</td><td>Avena: remojar 8-12hs con limón</td></tr>
+    <tr><td>Pectinas</td><td>Manzana y pera con cáscara</td><td>Cocidas con cáscara — libera más pectinas</td></tr>
+    </table></div>
+    <div class="alert"><strong>Regla de oro:</strong> Papa, arroz, legumbres → enfriar 4hs en heladera → comer frío o tibio. Más de 130° = pierde el efecto prebiótico.</div>
+  </div>
+
+  <button class="col-btn" onclick="col(this)"><span class="col-icon">🫐</span><div class="col-text"><div class="col-title">Pilar 2 — Antioxidantes</div><div class="col-sub">Contra el estrés oxidativo</div></div><span class="col-arr">▼</span></button>
+  <div class="col-body">
+    <div class="item"><span class="ilabel">Betacarotenos</span>Zanahoria, calabaza, batata, brócoli, espinaca</div>
+    <div class="item"><span class="ilabel">Sulforafano ⭐</span>Brócoli, coliflor, kale — los más potentes</div>
+    <div class="item"><span class="ilabel">Antocianinas</span>Arándanos, moras, frutillas (congelar concentra las antocianinas)</div>
+    <div class="item"><span class="ilabel">Betalaínas ⭐</span>Remolacha CRUDA — conserva 100% de los antioxidantes. Cocida pierde 40% pero sigue siendo prebiótica.</div>
+    <div class="item"><span class="ilabel">Curcumina ⭐</span>Cúrcuma SIEMPRE con pimienta negra — piperina aumenta absorción 20 veces</div>
+    <div class="item"><span class="ilabel">Polifenoles</span>Cacao amargo 70%+, aceite de oliva EV, aceitunas</div>
+  </div>
+
+  <button class="col-btn" onclick="col(this)"><span class="col-icon">🐟</span><div class="col-text"><div class="col-title">Pilar 3 — Omega 3</div><div class="col-sub">El nutriente del sistema nervioso</div></div><span class="col-arr">▼</span></button>
+  <div class="col-body">
+    <div class="item b"><span class="ilabel">ALA vegetal (diario)</span>1 cda chía o lino MOLIDOS = dosis diaria cubierta. 5 nueces también.</div>
+    <div class="item b"><span class="ilabel">EPA + DHA directo</span>Salmón, atún, sardinas, caballa, arenque — 2-3 veces por semana</div>
+    <div class="item b"><span class="ilabel">Cáñamo / hemp ⭐</span>Proteína completa + relación óptima omega 3/6. Sin remojo. Al smoothie directo.</div>
+    <div class="alert" style="margin-top:10px"><strong>Evitar:</strong> Aceite de maíz y girasol refinado — desequilibran omega 6/3.</div>
+  </div>
+
+  <button class="col-btn" onclick="col(this)"><span class="col-icon">📊</span><div class="col-text"><div class="col-title">Pilar 4 — Baja carga glucémica</div><div class="col-sub">Glucemia estable = energía estable</div></div><span class="col-arr">▼</span></button>
+  <div class="col-body">
+    <div class="item a"><span class="ilabel">Orden del plato</span>Primero vegetales o proteínas, DESPUÉS los hidratos</div>
+    <div class="item a"><span class="ilabel">Antes de comer</span>1 cda vinagre de manzana en agua → mejora sensibilidad a la insulina</div>
+    <div class="item a"><span class="ilabel">Después de comer</span>Caminar 10-15 min → músculos usan la glucosa circulante</div>
+    <div class="item a"><span class="ilabel">Efecto 2da comida</span>Legumbres en el desayuno reducen la curva del almuerzo siguiente</div>
+  </div>
+</div>
+
+<!-- ══ PROTOCOLO ══ -->
+<div id="page-protocolo" class="page">
+  <div class="big-title">El Protocolo 5R</div>
+  <div class="big-sub">Para reiniciar el intestino paso a paso</div>
+
+  <div class="card"><div class="cband t"></div><div class="c-body" style="padding-top:14px">
+    <div class="item t"><span class="ilabel">1 — REMOVER</span>Eliminar ultraprocesados, azúcar libre, harinas blancas, colorantes artificiales, aceite girasol refinado.</div>
+    <div class="item t"><span class="ilabel">2 — REPONER</span>1 cda vinagre de manzana sin pasteurizar en agua antes de las comidas principales.</div>
+    <div class="item t"><span class="ilabel">3 — REINOCULAR</span>Chucrut, kimchi, kéfir de agua, yogur de coco + legumbres y vegetales variados diariamente.</div>
+    <div class="item t"><span class="ilabel">4 — REPARAR</span>Caldo de huesos (colágeno + glutamina), zinc (semillas activadas), vitamina D (sol + salmón).</div>
+    <div class="item t"><span class="ilabel">5 — REEQUILIBRAR</span>Dormir 7-8hs, espaciar comidas 3-4hs, caminar, sol, masticación consciente.</div>
+  </div></div>
+
+  <div class="sec-hdr"><div class="sec-dot" style="background:var(--t3)"></div><div class="sec-ttl" style="color:var(--t1)">Cándida y antojos</div></div>
+  <div class="alert g"><strong>Los antojos de dulce no son falta de voluntad.</strong> La Cándida envía señales al cerebro pidiendo azúcar. 15-20 días de restricción = empieza a morir.</div>
+  <div class="tbl-wrap"><table class="tbl">
+    <tr><th>Antojo</th><th>Reemplazo antiinflamatorio</th></tr>
+    <tr><td>Chocolate con leche</td><td>Trufas dátiles + cacao 70%</td></tr>
+    <tr><td>Helado</td><td>Banana verde congelada 2 min</td></tr>
+    <tr><td>Galletitas</td><td>Galletitas lentejas + coco + dátil</td></tr>
+    <tr><td>Alfajor</td><td>Alfajores semillas + pasta dátiles</td></tr>
+    <tr><td>Bebida azucarada</td><td>Limonada jengibre + menta</td></tr>
+    <tr><td>Brownie</td><td>Brownie de remolacha + cacao</td></tr>
+  </table></div>
+
+  <div class="sec-hdr"><div class="sec-dot" style="background:var(--t3)"></div><div class="sec-ttl" style="color:var(--t1)">Hinchazón y gases</div></div>
+  <div class="card"><div class="cband t"></div><div class="c-body" style="padding-top:12px">
+    <div class="item t"><span class="ilabel">Al cocinar legumbres</span>Agregar laurel, canela o manzanilla al agua de cocción.</div>
+    <div class="item t"><span class="ilabel">Infusiones carminativas</span>Anís estrellado, hinojo o menta.</div>
+    <div class="item t"><span class="ilabel">Masaje abdominal</span>Circular en sentido horario.</div>
+    <div class="item t"><span class="ilabel">Masticar bien</span>Reduce la fermentación en el colon.</div>
+  </div></div>
+</div>
+
+<!-- ══ ALIMENTOS ══ -->
+<div id="page-alimentos" class="page">
+  <div class="big-title">Guía de Alimentos</div>
+  <div class="big-sub">Semáforo, proteínas, legumbres, semillas y nutrientes críticos</div>
+
+  <div class="card"><div class="cband t"></div>
+    <div class="c-head"><span class="c-icon">🚦</span><div><div class="c-title">El semáforo</div></div></div>
+    <div class="c-body">
+      <div class="item t"><span class="ilabel">🟢 Comer seguido</span>Pescados de mar, huevos de campo, legumbres, verduras de colores, frutas enteras con cáscara, granos enteros remojados, frutos secos, fermentados diarios</div>
+      <div class="item a"><span class="ilabel">🟡 Con moderación</span>Carne vacuna de pastoreo (1-2x semana), pollo, lácteos fermentados, arroz blanco, leche de vaca (preferir fermentados), café (1-2/día)</div>
+      <div class="item r"><span class="ilabel">🔴 Reducir</span>Carnes procesadas, harinas blancas, azúcar libre, aceite girasol/maíz refinado, colorantes artificiales (INS+número), ultraprocesados, edulcorantes artificiales</div>
+    </div>
+  </div>
+
+  <button class="col-btn" onclick="col(this)"><span class="col-icon">🥚</span><div class="col-text"><div class="col-title">Proteínas animales</div><div class="col-sub">Frecuencia y preparación ideal</div></div><span class="col-arr">▼</span></button>
+  <div class="col-body">
+    <div class="tbl-wrap"><table class="tbl">
+      <tr><th>Alimento</th><th>Frecuencia</th><th>Beneficio</th></tr>
+      <tr><td>Salmón, atún, sardinas, caballa</td><td>2-3x semana</td><td>EPA+DHA directo</td></tr>
+      <tr><td>Merluza, lenguado</td><td>1-2x semana</td><td>Proteína magra + selenio</td></tr>
+      <tr><td>Huevos de campo</td><td>1-2 por día</td><td>Colina + tirosina + triptófano</td></tr>
+      <tr><td>Pollo de campo</td><td>2-3x semana</td><td>Proteína magra + triptófano</td></tr>
+      <tr><td>Carne vacuna magra</td><td>1-2x semana máx</td><td>Hierro hemo + B12 + zinc</td></tr>
+    </table></div>
+  </div>
+
+  <button class="col-btn" onclick="col(this)"><span class="col-icon">🫘</span><div class="col-text"><div class="col-title">Legumbres y granos</div><div class="col-sub">Cómo prepararlos para máximo beneficio</div></div><span class="col-arr">▼</span></button>
+  <div class="col-body">
+    <div class="tbl-wrap"><table class="tbl">
+      <tr><th>Alimento</th><th>Preparación</th><th>Por qué</th></tr>
+      <tr><td>Lentejas</td><td>Remojar 12-24hs + enfriar</td><td>Hierro + almidón resistente</td></tr>
+      <tr><td>Garbanzos</td><td>Remojar 12-24hs + enfriar</td><td>Proteína completa + calcio + inulina</td></tr>
+      <tr><td>Quinoa</td><td>Lavar hasta agua clara</td><td>Proteína completa todos los aminoácidos</td></tr>
+      <tr><td>Arroz yamaní</td><td>Cocinar + enfriar en heladera</td><td>Almidón resistente frío</td></tr>
+      <tr><td>Avena</td><td>Remojar 8-12hs con limón</td><td>Betaglucanos + reduce antinutrientes</td></tr>
+      <tr><td>Sarraceno</td><td>Remojar o usar harina</td><td>Sin gluten + proteína 12% + quercetina</td></tr>
+    </table></div>
+  </div>
+
+  <button class="col-btn" onclick="col(this)"><span class="col-icon">🌱</span><div class="col-text"><div class="col-title">Guía completa de semillas</div><div class="col-sub">Tiempos de remojo y proporciones exactas</div></div><span class="col-arr">▼</span></button>
+  <div class="col-body">
+    <div class="tbl-wrap"><table class="tbl">
+      <tr><th>Semilla</th><th>Remojo</th><th>Cómo consumir</th><th>Nutriente estrella</th></tr>
+      <tr><td>Chía</td><td>15 min (gel) o 6hs (máx nutrición)</td><td>MOLER siempre — máx 10-15 días heladera</td><td>ALA omega 3 + mucílago</td></tr>
+      <tr><td>Lino</td><td>15 min mínimo</td><td>MOLER siempre — máx 10-15 días heladera</td><td>Lignanos + fibra soluble</td></tr>
+      <tr><td>Sésamo</td><td>8 horas</td><td>Molido o tahine</td><td>975mg calcio/100g</td></tr>
+      <tr><td>Calabaza</td><td>8 horas</td><td>Molida o entera activada</td><td>262mg magnesio% + zinc</td></tr>
+      <tr><td>Girasol</td><td>8 horas</td><td>Activadas, enteras o untable</td><td>Vitamina E + proteína</td></tr>
+      <tr><td>Cáñamo / Hemp ⭐</td><td>No necesita</td><td>Directo al smoothie o ensalada</td><td>Proteína COMPLETA + omega 3/6 ideal</td></tr>
+      <tr><td>Psyllium ⭐</td><td>No aplica</td><td>1 cda en agua antes de comer</td><td>Absorbe 40x su peso — fibra maestra</td></tr>
+    </table></div>
+    <div class="alert g" style="margin-top:10px"><strong>⭐ Polvo de magnesio casero — proporciones exactas:</strong> 100g semillas calabaza + 100g lino + 50g sésamo + 50g chía + 50g cacao amargo. Todo molido. Frasco en heladera máx 15 días. <strong>3 cdas diarias = 200mg de magnesio.</strong></div>
+  </div>
+
+  <button class="col-btn" onclick="col(this)"><span class="col-icon">⚠️</span><div class="col-text"><div class="col-title">Nutrientes críticos</div><div class="col-sub">Los que más se olvidan</div></div><span class="col-arr">▼</span></button>
+  <div class="col-body">
+    <div class="item a"><span class="ilabel">Hierro — NO tomar mate/té 1hs después</span>Vitamina C + ajo/cebolla aumentan absorción hasta 70%. Mantener ferritina >30-45 ng/mL para TDAH (no solo >12).</div>
+    <div class="item a"><span class="ilabel">Calcio vegetal</span>Sésamo molido: 975mg/100g. Chía molida: 630mg/100g. Brócoli y kale = mejor absorción que la leche.</div>
+    <div class="item a"><span class="ilabel">Vitamina B12 ⚠️</span>Los fermentados NO proveen B12 activa. Si el consumo de proteína animal es bajo, suplementar bajo supervisión médica. Levadura nutricional ENRIQUECIDA suma.</div>
+    <div class="item a"><span class="ilabel">Zinc + Magnesio</span>Activar siempre remojando. Cacao amargo + semillas lino = fuentes estrella de magnesio. El polvo de magnesio casero: 3 cdas = 200mg.</div>
+  </div>
+
+  <button class="col-btn" onclick="col(this)"><span class="col-icon">🧀</span><div class="col-text"><div class="col-title">Levadura nutricional + Rawmesan</div><div class="col-sub">El ingrediente secreto de la cocina antiinflamatoria</div></div><span class="col-arr">▼</span></button>
+  <div class="col-body">
+    <div class="item t"><span class="ilabel">¿Qué es?</span>Levadura de cerveza inactivada, en copos o polvo. Sabor umami tipo queso. No es lo mismo que la levadura para pan — esta está inactivada y no fermenta nada.</div>
+    <div class="item t"><span class="ilabel">Enriquecida con B12 ⭐</span>Si el envase dice "enriquecida" o "fortified" suma B12 activa — el nutriente más difícil de obtener sin consumo animal frecuente.</div>
+    <div class="item t"><span class="ilabel">Zinc + vitaminas B</span>Fuente natural de zinc y vitaminas del grupo B. 2 cdas al día cubren una parte significativa de la necesidad de zinc para TDAH.</div>
+    <div class="item t"><span class="ilabel">Rawmesan — hacerlo en frasco</span>3 cdas levadura nutricional + 2 cdas semillas molidas o cajú procesado + pizca de sal + pizca de ajo en polvo → mezclar → frasco. Espolvorear encima de fideos, woks, sopas y ensaladas. Dura 2 semanas a temperatura ambiente.</div>
+    <div class="item t"><span class="ilabel">Dónde usarla</span>Encima de la sopa, en el wok de fideos, en el arroz yamaní, como "queso" de la pizza de lentejas, en las albóndigas.</div>
+  </div>
+
+  <button class="col-btn" onclick="col(this)"><span class="col-icon">🌶️</span><div class="col-text"><div class="col-title">Especiero antiinflamatorio</div><div class="col-sub">Tenerlas siempre a la vista — cambian todo el sabor</div></div><span class="col-arr">▼</span></button>
+  <div class="col-body">
+    <div class="tbl-wrap"><table class="tbl">
+      <tr><th>Especia</th><th>Propiedades clave</th><th>Cómo usarla</th></tr>
+      <tr><td>🟡 Cúrcuma + pimienta negra ⭐</td><td>Curcumina antiinflamatoria. La piperina aumenta absorción x20</td><td>SIEMPRE juntas, al FINAL de la cocción. Con cebolla o ajo potencia el efecto.</td></tr>
+      <tr><td>🟤 Jengibre</td><td>Antiinflamatorio + digestivo + estimula sistema inmune</td><td>Fresco rallado (congelar en cubitos) o en polvo. Limonadas, woks, sopas.</td></tr>
+      <tr><td>🟠 Canela de Ceilán ⭐</td><td>Control de glucemia + propiedades neuroprotectoras estudiadas</td><td>En desayunos dulces, porridge, chía pudding. La variedad Ceilán es la más segura para uso diario.</td></tr>
+      <tr><td>🟤 Cacao amargo</td><td>Polifenoles antiinflamatorios + magnesio + hierro</td><td>Sin azúcar. En trufas, postres, smoothies, porridge. 2 cdas = 25mg magnesio.</td></tr>
+      <tr><td>🌿 Ajo y cebolla crudos ⭐</td><td>Inulina prebiótica + potencia absorción hierro y zinc hasta 70%</td><td>Crudos o agregar al final de la cocción para conservar los compuestos activos.</td></tr>
+      <tr><td>🌿 Orégano + laurel</td><td>Carminativos — reducen gases de las legumbres</td><td>Siempre al cocinar lentejas y garbanzos.</td></tr>
+    </table></div>
+    <div class="alert g" style="margin-top:10px"><strong>Truco TDAH:</strong> Tener las 4 especias estrella (cúrcuma + pimienta + jengibre + canela) en un frasco juntas ya mezcladas. 1 cdita de la mezcla va encima de cualquier plato sin pensar.</div>
+  </div>
+
+</div>
+
+<!-- ══ RECETAS ══ -->
+<div id="page-recetas" class="page">
+  <div class="big-title">Recetas</div>
+  <div class="big-sub">Organizadas por momento del día</div>
+
+  <div class="cat-tabs">
+    <button class="cat-btn active" onclick="showCat('desayuno',this)">☀️ Desayuno</button>
+    <button class="cat-btn" onclick="showCat('principal',this)">🥗 Plato Principal</button>
+    <button class="cat-btn active-p" onclick="showCat('snack',this)">🍬 Snacks</button>
+    <button class="cat-btn" onclick="showCat('untable',this)">🥣 Untables</button>
+    <button class="cat-btn" onclick="showCat('dulce',this)">🍫 Dulces</button>
+    <button class="cat-btn" onclick="showCat('rapidas',this)">⚡ Rápidas</button>
+  </div>
+
+  <!-- DESAYUNO -->
+  <div id="cat-desayuno" class="cat-section active">
+
+    <div class="receta">
+      <div class="r-head" style="background:linear-gradient(135deg,var(--g2),var(--g3))">
+        <span class="r-emoji">🍳</span><span class="r-nombre">Pan de lino y huevo</span><span class="r-tiempo">⏱ 2 min</span>
+      </div>
+      <div class="r-body">
+        <div class="r-badge tdah">🧠 TDAH — sin función ejecutiva</div>
+        <div class="r-badge rapido">⚡ El más rápido</div>
+        <div class="r-ing"><span class="r-ing-label">Ingredientes (1 porción)</span>2 cdas de lino molido (moler en el molinillo de acero) · 1 huevo · 1 pizca de sal marina · 1/4 cdita de polvo de hornear · opcional: cúrcuma + pimienta negra · opcional: orégano o ajo en polvo</div>
+        <div class="r-paso">Mezclar todo en un bol. <strong>Microondas:</strong> 2 minutos. <strong>Sartén antiadherente tapada:</strong> 2-3 min por lado. Acompañar con palta + tomate cherry.</div>
+        <div class="r-nota">💡 Mezclar la noche anterior y guardar tapado en heladera. A la mañana: microondas 2 minutos. 0 decisión, 0 función ejecutiva.</div>
+      </div>
+    </div>
+
+    <div class="receta">
+      <div class="r-head" style="background:linear-gradient(135deg,var(--p1),var(--p3))">
+        <span class="r-emoji">🫙</span><span class="r-nombre">Chía pudding</span><span class="r-tiempo">⏱ 0 min mañana</span>
+      </div>
+      <div class="r-body">
+        <div class="r-badge tdah">🧠 TDAH — preparar noche anterior</div>
+        <div class="r-ing"><span class="r-ing-label">Ingredientes (1 porción)</span>1 cda de chía MOLIDA (molinillo de acero) · 150ml leche vegetal sin endulzar (coco o almendras) · frutos rojos congelados · 5 nueces · opcional: 1/2 cdita cacao amargo</div>
+        <div class="r-paso">La noche anterior: mezclar chía molida con leche en frasco. Cerrar. Heladera. A la mañana: agregar frutos rojos y nueces encima. Comer directo del frasco — 0 platos.</div>
+        <div class="r-nota">💡 MOLER la chía antes de hidratar — así libera omega 3 además de fibra. Chía entera pasa intacta sin aportar nutrientes.</div>
+      </div>
+    </div>
+
+    <div class="receta">
+      <div class="r-head" style="background:linear-gradient(135deg,var(--b1),var(--b3))">
+        <span class="r-emoji">🥤</span><span class="r-nombre">Smoothie proteico dopaminérgico</span><span class="r-tiempo">⏱ 60 seg</span>
+      </div>
+      <div class="r-body">
+        <div class="r-badge tdah">🧠 TDAH — máxima dopamina</div>
+        <div class="r-badge rapido">⚡ 60 segundos</div>
+        <div class="r-ing"><span class="r-ing-label">Ingredientes (1 porción)</span>200ml leche vegetal sin endulzar · 1 banana (puede ser congelada, preferir verde) · 1 cda pasta de maní 100% · 1 cda chía MOLIDA · 1 medida Star Nutrition Platinum Whey (chocolate) · opcional: 1 cda cacao amargo · opcional: 1 cda semillas de cáñamo/hemp</div>
+        <div class="r-paso">Todo a la licuadora Moulinex. 30 segundos. Tomar directo del vaso de la licuadora — una sola cosa para lavar.</div>
+        <div class="r-nota">💡 Sin whey ya son ~15g proteína. Con el whey llegás a 35-40g. Las semillas de cáñamo suman proteína completa + omega 3/6 ideal para TDAH.</div>
+      </div>
+    </div>
+
+    <div class="receta">
+      <div class="r-head" style="background:linear-gradient(135deg,var(--g2),var(--g3))">
+        <span class="r-emoji">🫐</span><span class="r-nombre">Bowl de arándanos</span><span class="r-tiempo">⏱ 3 min</span>
+      </div>
+      <div class="r-body">
+        <div class="r-badge prebiotico">🦠 Prebiótico + antioxidante</div>
+        <div class="r-ing"><span class="r-ing-label">Ingredientes (1 porción)</span>1 taza arándanos congelados · 1 cda semillas molidas (chía+lino+sésamo) · 50ml leche vegetal · Topping: banana + nueces + coco rallado sin azúcar</div>
+        <div class="r-paso">Procesar arándanos con semillas y leche en la picadora hasta crema helada. Poner en bowl. Agregar toppings encima.</div>
+        <div class="r-nota">💡 Los arándanos congelados concentran las antocianinas. Las proantocianidinas tipo A llegan intactas al colon.</div>
+      </div>
+    </div>
+
+    <div class="receta">
+      <div class="r-head" style="background:linear-gradient(135deg,var(--t1),var(--t3))">
+        <span class="r-emoji">🥧</span><span class="r-nombre">Copa de avena con cacao</span><span class="r-tiempo">⏱ 5 min + noche</span>
+      </div>
+      <div class="r-body">
+        <div class="r-badge tdah">🧠 TDAH — preparar noche anterior</div>
+        <div class="r-badge prebiotico">🦠 Betaglucanos</div>
+        <div class="r-ing"><span class="r-ing-label">Ingredientes (1 porción)</span>1/2 taza avena arrollada remojada 12hs (agua + unas gotas de limón o vinagre de manzana) · 2 cdas cacao amargo (o algarroba — 40g fibra/100g) · 1 cda aceite de coco · 1 cda pasta de dátiles · Topping: chocolate 80% picado + frutos secos + semillas molidas</div>
+        <div class="r-paso">La noche anterior: remojar la avena con agua + limón. A la mañana: escurrir, mezclar con cacao, aceite de coco y pasta de dátiles. Refrigerar. Servir FRÍA.</div>
+        <div class="r-nota">💡 La avena remojada FRÍA maximiza los betaglucanos prebióticos. La algarroba reemplaza el cacao con 40g de fibra cada 100g.</div>
+      </div>
+    </div>
+
+    <div class="receta">
+      <div class="r-head" style="background:linear-gradient(135deg,var(--g2),var(--g3))">
+        <span class="r-emoji">🥚</span><span class="r-nombre">Omelette de verduras</span><span class="r-tiempo">⏱ 8 min</span>
+      </div>
+      <div class="r-body">
+        <div class="r-badge tdah">🧠 TDAH — proteína pura</div>
+        <div class="r-ing"><span class="r-ing-label">Ingredientes (1 porción)</span>2-3 huevos de campo · 1 puñado de espinaca fresca · 1/4 cebolla · 1/4 pimiento rojo · 1 cdita cúrcuma + pimienta negra · 1 cda aceite de oliva EV · sal marina</div>
+        <div class="r-paso">Saltear cebolla y pimiento en oliva 3 min. Agregar espinaca 1 min. Batir huevos con cúrcuma y pimienta. Verter sobre las verduras. Tapar y cocinar a fuego bajo 3-4 min hasta que cuaje.</div>
+        <div class="r-nota">💡 Proteína pura, cero pico glucémico. La cúrcuma con pimienta negra activa la curcumina x20. Acompañar con pan de lino o palta.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- PLATO PRINCIPAL -->
+  <div id="cat-principal" class="cat-section">
+
+    <div class="receta">
+      <div class="r-head" style="background:linear-gradient(135deg,var(--b1),var(--b3))">
+        <span class="r-emoji">🥗</span><span class="r-nombre">Bowl frío (vianda A)</span><span class="r-tiempo">⏱ 3 min armar</span>
+      </div>
+      <div class="r-body">
+        <div class="r-badge tdah">🧠 TDAH — armar noche anterior</div>
+        <div class="r-badge prebiotico">🦠 Almidón resistente</div>
+        <div class="r-ing"><span class="r-ing-label">Ingredientes (1 porción)</span>1 taza arroz yamaní FRÍO (cocido día anterior) · 1/2 taza garbanzos FRÍOS (cocidos y enfriados 4hs mín) · zanahoria rallada con rayador eléctrico · 1/2 palta · 1 cda oliva EV · jugo de limón · sal · 1 cda semillas molidas encima</div>
+        <div class="r-paso">Armar en tupper la noche anterior. Arroz y garbanzos ya están en la heladera de las bases semanales. Todo frío. Cerrar. Llevar al trabajo.</div>
+        <div class="r-nota">💡 Arroz y garbanzos FRÍOS = almidón resistente prebiótico. La zanahoria cruda rallada con el rayador eléctrico tarda 30 segundos.</div>
+      </div>
+    </div>
+
+    <div class="receta">
+      <div class="r-head" style="background:linear-gradient(135deg,var(--p1),var(--p3))">
+        <span class="r-emoji">🌮</span><span class="r-nombre">Tacos / fajitas (vianda B)</span><span class="r-tiempo">⏱ 3 min armar</span>
+      </div>
+      <div class="r-body">
+        <div class="r-badge tdah">🧠 TDAH — fajitas del freezer</div>
+        <div class="r-ing"><span class="r-ing-label">Ingredientes (1 porción)</span>2 fajitas de sarraceno o garbanzos (del freezer) · 2-3 cdas hummus · verduras cortadas (zanahoria, pepino, tomates cherry) · 1/2 palta · opcional: atún al natural + limón · chucrut al lado</div>
+        <div class="r-paso">Las fajitas se descongelan solas en el tupper durante el transporte. Armar en tupper la noche anterior. Llevar.</div>
+        <div class="r-nota">💡 Las fajitas congeladas con papel manteca entre cada una duran 6 meses en el freezer. El chucrut al lado suma probióticos.</div>
+      </div>
+    </div>
+
+    <div class="receta">
+      <div class="r-head" style="background:linear-gradient(135deg,var(--a1),var(--a3))">
+        <span class="r-emoji">🐟</span><span class="r-nombre">Ensalada completa con atún (vianda C)</span><span class="r-tiempo">⏱ 4 min armar</span>
+      </div>
+      <div class="r-body">
+        <div class="r-badge rapido">⚡ Sin cocinar nada</div>
+        <div class="r-ing"><span class="r-ing-label">Ingredientes (1 porción)</span>2 puñados espinaca fresca · 1/2 taza garbanzos FRÍOS · 1 lata atún al natural (sin aceite) · tomates cherry · 5 nueces · 1 cda oliva EV · jugo de limón · sal · opcional: semillas molidas encima</div>
+        <div class="r-paso">Armar en tupper la noche anterior. Todo frío, todo del batch semanal. Limón y oliva arriba para que no se ablande la espinaca.</div>
+        <div class="r-nota">💡 El atún al natural da EPA+DHA directo. Los garbanzos fríos suman prebiótico. El limón ayuda a absorber el hierro de la espinaca.</div>
+      </div>
+    </div>
+
+    <div class="receta">
+      <div class="r-head" style="background:linear-gradient(135deg,var(--g2),var(--g3))">
+        <span class="r-emoji">🥚</span><span class="r-nombre">Revuelto cremoso de huevos con champignones</span><span class="r-tiempo">⏱ 12 min</span>
+      </div>
+      <div class="r-body">
+        <div class="r-badge prebiotico">🦠 Betaglucanos (hongos)</div>
+        <div class="r-ing"><span class="r-ing-label">Ingredientes (1 porción)</span>2-3 huevos de campo · 200g champignones frescos · 2 dientes ajo · 1 cda oliva EV · cúrcuma + pimienta negra · sal · perejil fresco · 2 cdas chucrut al lado</div>
+        <div class="r-paso">Saltear champignones con ajo en oliva 5 min hasta dorar. Batir huevos con cúrcuma y pimienta. Agregar al sartén. Revolver suave a fuego bajo hasta cremoso. Servir con chucrut al lado.</div>
+        <div class="r-nota">💡 Los champignones son betaglucanos prebióticos. El chucrut suma probióticos vivos. Una de las cenas más completas del plan.</div>
+      </div>
+    </div>
+
+    <div class="receta">
+      <div class="r-head" style="background:linear-gradient(135deg,var(--t1),var(--t3))">
+        <span class="r-emoji">🍲</span><span class="r-nombre">Sopa crema antiinflamatoria</span><span class="r-tiempo">⏱ 3 min activos</span>
+      </div>
+      <div class="r-body">
+        <div class="r-badge tdah">🧠 TDAH — soupmaker hace todo</div>
+        <div class="r-ing"><span class="r-ing-label">Ingredientes (2 porciones)</span>400g zapallo o zanahoria cortado en trozos · 1 diente ajo · 1 trozo jengibre fresco · 1 cdita cúrcuma + pimienta negra · 1 cda oliva EV · sal marina · 400ml agua · opcional: 1 lata leche de coco para cremosidad · semillas molidas encima para servir</div>
+        <div class="r-paso">Cargar el soupmaker con todos los ingredientes. Apretar el botón. 20 minutos solo. Servir con 2 cdas de semillas molidas encima y pan chato tostado al lado.</div>
+        <div class="r-nota">💡 Con el minipimer podés hacerla directo en la olla si no usás el soupmaker. El jengibre fresco congelado en cubitos: tirar directo al soupmaker sin descongelar.</div>
+      </div>
+    </div>
+
+    <div class="receta">
+      <div class="r-head" style="background:linear-gradient(135deg,var(--b1),var(--b3))">
+        <span class="r-emoji">🐟</span><span class="r-nombre">Salmón al horno con batata fría</span><span class="r-tiempo">⏱ 25 min</span>
+      </div>
+      <div class="r-body">
+        <div class="r-badge prebiotico">🦠 Almidón resistente (batata)</div>
+        <div class="r-ing"><span class="r-ing-label">Ingredientes (1 porción)</span>1 filete de salmón (150-200g) · 1 batata mediana (cocida y ENFRIADA en heladera) · jugo de 1 limón · 1 cda oliva EV · cúrcuma + pimienta negra · ajo en polvo · sal marina · perejil o cilantro</div>
+        <div class="r-paso">Marinar el salmón con limón, oliva, cúrcuma, ajo y sal 10 min. Horno eléctrico Winco 180° 15-18 min. Servir con la batata fría de la heladera + ensalada de hojas verdes.</div>
+        <div class="r-nota">💡 La batata FRÍA tiene almidón resistente prebiótico. El salmón da EPA+DHA directo. Esta combinación es el mejor plato del plan para TDAH.</div>
+      </div>
+    </div>
+
+    <div class="receta">
+      <div class="r-head" style="background:linear-gradient(135deg,var(--g2),var(--g3))">
+        <span class="r-emoji">🫘</span><span class="r-nombre">Garbanzos a la provenzal</span><span class="r-tiempo">⏱ 5 min</span>
+      </div>
+      <div class="r-body">
+        <div class="r-badge prebiotico">🦠 Almidón resistente + inulina</div>
+        <div class="r-ing"><span class="r-ing-label">Ingredientes (1 porción)</span>1 taza garbanzos cocidos FRÍOS (mín 4hs heladera) · 2 dientes ajo picado fino crudo · perejil fresco picado abundante · 2 cdas oliva EV · jugo de limón · sal marina · opcional: pimiento rojo asado</div>
+        <div class="r-paso">Mezclar todo. Dejar reposar 15 minutos para integrar sabores. Servir frío.</div>
+        <div class="r-nota">💡 El ajo CRUDO es inulina prebiótica + potencia la absorción de hierro y zinc. Los garbanzos fríos = almidón resistente. El limón = vitamina C que mejora el hierro.</div>
+      </div>
+    </div>
+
+    <div class="receta">
+      <div class="r-head" style="background:linear-gradient(135deg,#6a1b9a,#ab47bc)">
+        <span class="r-emoji">🟣</span><span class="r-nombre">Tortilla fría de papa</span><span class="r-tiempo">⏱ 30 min + enfriar</span>
+      </div>
+      <div class="r-body">
+        <div class="r-badge prebiotico">🦠 Almidón resistente</div>
+        <div class="r-ing"><span class="r-ing-label">Ingredientes (2 porciones)</span>3 papas medianas · 1 cebolla grande · 3-4 huevos de campo · 2 cdas oliva EV · sal marina · pimienta negra · chucrut al lado para servir</div>
+        <div class="r-paso">Pelar y cortar las papas finas. Saltear cebolla en oliva hasta transparente. Agregar papa y cocinar hasta tierna. Batir huevos con sal y pimienta. Mezclar todo. Cocinar en sartén tapada fuego bajo 5 min por lado. Dejar enfriar COMPLETAMENTE. Refrigerar 4-6hs antes de comer.</div>
+        <div class="r-nota">💡 Comerla FRÍA es fundamental — el almidón de la papa se vuelve resistente al enfriar. Con chucrut al lado = almidón resistente + probiótico.</div>
+      </div>
+    </div>
+
+    <div class="receta">
+      <div class="r-head" style="background:linear-gradient(135deg,var(--g2),var(--g3))">
+        <span class="r-emoji">🫘</span><span class="r-nombre">Fajitas de lentejas (almidón resistente)</span><span class="r-tiempo">⏱ 20 min</span>
+      </div>
+      <div class="r-body">
+        <div class="r-badge batch">📦 Batch — freezer 6 meses</div>
+        <div class="r-ing"><span class="r-ing-label">Ingredientes (6-8 fajitas)</span>1 taza lentejas cocidas (previo remojo 12hs) · 1 taza agua · 1/2 taza harina de garbanzos · sal · cúrcuma + comino + pimienta negra · opcional: 1 cda semillas molidas dentro de la masa</div>
+        <div class="r-paso">Licuar lentejas con agua y harina hasta masa fluida. Condimentar. Cocinar en sandwichera eléctrica o panquequera. Dejar enfriar COMPLETAMENTE. Refrigerar 4hs mínimo. Comer frías o congelar separadas con papel manteca.</div>
+        <div class="r-nota">💡 Frías = almidón resistente prebiótico. Congeladas duran 6 meses. La sandwichera hace 2 a la vez sin dar vuelta. Rellenar con hummus + palta + chucrut.</div>
+      </div>
+    </div>
+
+    <div class="receta">
+      <div class="r-head" style="background:linear-gradient(135deg,var(--g2),var(--g3))">
+        <span class="r-emoji">🌿</span><span class="r-nombre">Tarta de puerros e inulina</span><span class="r-tiempo">⏱ 45 min</span>
+      </div>
+      <div class="r-body">
+        <div class="r-badge prebiotico">🦠 Inulina (puerro + cebolla + ajo)</div>
+        <div class="r-ing"><span class="r-ing-label">Masa</span>1 taza harina de garbanzos · 2 cdas chía hidratada (chía + 4 cdas agua, reposar 10 min) · 2 cdas oliva EV · 1/2 cdita cúrcuma · sal · agua c/n</div>
+        <div class="r-ing"><span class="r-ing-label">Relleno</span>2 puerros grandes · 1 cebolla · 2-3 dientes ajo · 2 cdas oliva EV · sal · pimienta · cúrcuma · 2 huevos batidos (opcional, para que ligue)</div>
+        <div class="r-paso">MASA: Mezclar harina + chía hidratada + oliva + cúrcuma + sal + agua hasta masa. Forrar tartera aceitada. Hornear 15 min a 180°. RELLENO: Saltear puerro + cebolla + ajo en oliva hasta tiernos 10 min. Condimentar. Rellenar la masa. Hornear 20 min más a 180°.</div>
+        <div class="r-nota">💡 Puerro + cebolla + ajo = las tres fuentes más concentradas de inulina prebiótica en una sola receta. Comer tibia o fría. Refrigerada = almidón resistente adicional.</div>
+      </div>
+    </div>
+
+    <div class="receta">
+      <div class="r-head" style="background:linear-gradient(135deg,#6a1b9a,#ab47bc)">
+        <span class="r-emoji">🟣</span><span class="r-nombre">Ensalada rusa antiinflamatoria</span><span class="r-tiempo">⏱ 5 min (+ noche anterior)</span>
+      </div>
+      <div class="r-body">
+        <div class="r-badge prebiotico">🦠 Triple almidón resistente</div>
+        <div class="r-ing"><span class="r-ing-label">Ingredientes (1 porción)</span>2 papas medianas cocidas y ENFRIADAS 12hs · 2 zanahorias cocidas y ENFRIADAS 12hs · 1/2 taza arvejas · 1/2 taza garbanzos FRÍOS · Mayonesa: 1/2 palta + jugo de limón + sal (pisar con tenedor) · opcional: perejil fresco</div>
+        <div class="r-paso">Cocinar papas y zanahorias el día anterior. Enfriar en heladera al menos 12hs. Cortar en cubos fríos. Mezclar todo con la mayonesa de palta justo antes de servir.</div>
+        <div class="r-nota">💡 TODO debe estar frío — papas, zanahorias y garbanzos fríos = triple almidón resistente. La mayonesa de palta reemplaza la industrial con grasas antiinflamatorias.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- SNACKS -->
+  <div id="cat-snack" class="cat-section">
+
+    <div class="alert g"><strong>La bolsita de la cartera</strong> — hacer AHORA: nueces + castañas de cajú + 1 cuadradito chocolate 70%. Sin heladera, sin preparación, sin decisión. Alarma 11hs y 17hs = agarrar y comer.</div>
+
+    <div class="receta" style="margin-top:12px">
+      <div class="r-head" style="background:linear-gradient(135deg,var(--g2),var(--g3))">
+        <span class="r-emoji">🌰</span><span class="r-nombre">Bolsita de la cartera</span><span class="r-tiempo">⏱ 0 min</span>
+      </div>
+      <div class="r-body">
+        <div class="r-badge tdah">🧠 TDAH — siempre disponible</div>
+        <div class="r-ing"><span class="r-ing-label">Ingredientes</span>5 nueces · 10 castañas de cajú · 1 cuadradito chocolate 70-80% · opcional: 5 almendras activadas</div>
+        <div class="r-paso">Poner en una bolsita pequeña o tupper mini en la cartera o en el local. Renovar cada semana junto al batch cooking.</div>
+        <div class="r-nota">💡 Castañas de cajú = 72mg triptófano/30g → mejoran el sueño y el ánimo. Nueces = omega 3 ALA. Chocolate 70% = polifenoles antiinflamatorios.</div>
+      </div>
+    </div>
+
+    <div class="receta">
+      <div class="r-head" style="background:linear-gradient(135deg,var(--a1),var(--a3))">
+        <span class="r-emoji">🟠</span><span class="r-nombre">Trufas de zanahoria</span><span class="r-tiempo">⏱ 10 min</span>
+      </div>
+      <div class="r-body">
+        <div class="r-badge batch">📦 Batch — hacer 10-12 unidades</div>
+        <div class="r-ing"><span class="r-ing-label">Ingredientes (10-12 unidades)</span>2 zanahorias medianas · 2 cdas pasas de uva · 6 cdas semillas molidas (3 chía + 3 sésamo) · 1 cda cacao amargo · opcional: ralladura de naranja · coco rallado para bañar</div>
+        <div class="r-paso">Rallar las zanahorias con el rayador eléctrico (2 min). Procesar todo en la picadora Daewoo hasta que se integre. Armar bolitas. Bañar en coco rallado. Heladera hasta 4 días o freezer 3 meses.</div>
+        <div class="r-nota">💡 Hacer el domingo = snack para toda la semana. La zanahoria aporta betacarotenos + fibra prebiótica. El sésamo molido suma calcio.</div>
+      </div>
+    </div>
+
+    <div class="receta">
+      <div class="r-head" style="background:linear-gradient(135deg,var(--a1),var(--a3))">
+        <span class="r-emoji">🟣</span><span class="r-nombre">Trufas de remolacha cruda</span><span class="r-tiempo">⏱ 10 min</span>
+      </div>
+      <div class="r-body">
+        <div class="r-badge batch">📦 Batch dominical</div>
+        <div class="r-badge prebiotico">🦠 Betalaínas al 100%</div>
+        <div class="r-ing"><span class="r-ing-label">Ingredientes (8-10 unidades)</span>1 remolacha mediana CRUDA · 30g coco rallado sin azúcar · 50g dátiles sin carozo rehidratados · 2 cdas harina de almendras o frutos secos molidos · opcional: cacao amargo</div>
+        <div class="r-paso">Rallar la remolacha cruda con el rayador eléctrico. Procesar con los dátiles. Agregar coco y harina. Armar bolitas. Bañar en coco rallado. Heladera.</div>
+        <div class="r-nota">💡 CRUDA = 100% de betalaínas antioxidantes conservadas. Snack prebiótico sin cocción. Hacerlo el domingo junto a las trufas de zanahoria.</div>
+      </div>
+    </div>
+
+    <div class="receta">
+      <div class="r-head" style="background:linear-gradient(135deg,var(--p1),var(--p3))">
+        <span class="r-emoji">🍦</span><span class="r-nombre">Helado en 2 minutos</span><span class="r-tiempo">⏱ 2 min</span>
+      </div>
+      <div class="r-body">
+        <div class="r-badge prebiotico">🦠 Almidón resistente puro</div>
+        <div class="r-ing"><span class="r-ing-label">Ingredientes (1 porción)</span>1/2 banana verde CONGELADA (cuanto más verde, más fibra prebiótica) · 1 cda chía molida · 1/2 durazno fresco o congelado · opcional: 1 cda cacao amargo · opcional: frutos rojos congelados</div>
+        <div class="r-paso">Picar la banana congelada en trozos. Mezclar con chía molida y durazno. Dejar reposar 5-10 min para que la chía espese. Consumir inmediatamente.</div>
+        <div class="r-nota">💡 Banana verde = hasta 80% almidón resistente. Cuanto más madura, más azúcar y menos fibra. Congelar bananas verdes cuando están en su punto ideal.</div>
+      </div>
+    </div>
+
+    <div class="receta">
+      <div class="r-head" style="background:linear-gradient(135deg,var(--r1),var(--r3))">
+        <span class="r-emoji">🍬</span><span class="r-nombre">Gomitas de frutos rojos + agar agar</span><span class="r-tiempo">⏱ 20 min + freezer</span>
+      </div>
+      <div class="r-body">
+        <div class="r-badge batch">📦 Batch — duran 1 semana heladera</div>
+        <div class="r-badge prebiotico">🦠 Probiótico + antioxidante</div>
+        <div class="r-ing"><span class="r-ing-label">Ingredientes (20-25 gomitas)</span>100ml agua · 5g agar agar en polvo · 1/2 taza frutos rojos congelados o frescos (arándanos, frutillas, frambuesas) · 1 rodaja de limón · 1 dado jengibre fresco · stevia al gusto (opcional)</div>
+        <div class="r-paso">1. Hervir el agar agar diluido en 100ml agua 1 minuto. 2. Procesar los frutos rojos + limón + jengibre hasta puré. 3. Cuando el agar esté tibio, mezclar con el puré. 4. Volcar en moldes de silicona. 5. Freezer 15 minutos. 6. Desmoldar. Heladera hasta 1 semana.</div>
+        <div class="r-nota">💡 Los arándanos tienen proantocianidinas tipo A que llegan INTACTAS al colon. El agar agar (de algas marinas) aporta mucílagos prebióticos. Aptas para toda la familia.</div>
+      </div>
+    </div>
+
+    <div class="receta">
+      <div class="r-head" style="background:linear-gradient(135deg,#e91e63,#f48fb1)">
+        <span class="r-emoji">🍬</span><span class="r-nombre">Gomitas de psyllium + frutas</span><span class="r-tiempo">⏱ 15 min + 2hs heladera</span>
+      </div>
+      <div class="r-body">
+        <div class="r-badge prebiotico">🦠 Psyllium — fibra maestra</div>
+        <div class="r-ing"><span class="r-ing-label">Ingredientes</span>1 taza puré de fruta natural (frutillas, mango, frambuesas, arándanos o mezcla) · 1 cda psyllium en polvo · 1 cdita jugo de limón · 1 cdita chía molida (opcional, para textura extra)</div>
+        <div class="r-paso">Procesar las frutas hasta puré. Mezclar con psyllium, limón y chía molida. Revolver bien. Dejar reposar 10-15 minutos hasta que espese con textura gelatinosa. Volcar en moldes o fuente cuadrada. Heladera 2 horas mínimo. Desmoldar y cortar.</div>
+        <div class="r-nota">💡 Sin cocción = conserva el 100% de los antioxidantes y vitamina C. El psyllium absorbe 40x su peso en agua — regula el tránsito, alimenta la microbiota, da saciedad y baja la curva de glucemia.</div>
+      </div>
+    </div>
+
+    <div class="receta">
+      <div class="r-head" style="background:linear-gradient(135deg,var(--g2),var(--g3))">
+        <span class="r-emoji">🧆</span><span class="r-nombre">Garbanzos crocantes (airfryer)</span><span class="r-tiempo">⏱ 18 min</span>
+      </div>
+      <div class="r-body">
+        <div class="r-badge batch">📦 Batch semanal</div>
+        <div class="r-ing"><span class="r-ing-label">Ingredientes</span>1 taza garbanzos cocidos (secar bien con papel absorbente — esto es clave para que queden crocantes) · 1 cdita cúrcuma · 1 cdita pimentón ahumado · 1/2 cdita comino · 1 cda oliva EV · sal marina · opcional: pimienta de cayena</div>
+        <div class="r-paso">Secar los garbanzos con papel absorbente. Mezclar con las especias y oliva. Airfryer 200° durante 15 minutos. Agitar a mitad de cocción. Dejar enfriar completamente antes de guardar — si se guardan calientes pierden el crocante.</div>
+        <div class="r-nota">💡 El secreto del crocante es SECARLOS muy bien antes de condimentar. Duran 3 días a temperatura ambiente en frasco abierto (el aire los mantiene crocantes).</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- UNTABLES -->
+  <div id="cat-untable" class="cat-section">
+
+    <div class="receta">
+      <div class="r-head" style="background:linear-gradient(135deg,var(--a1),var(--a3))">
+        <span class="r-emoji">🧄</span><span class="r-nombre">Hummus clásico</span><span class="r-tiempo">⏱ 5 min</span>
+      </div>
+      <div class="r-body">
+        <div class="r-badge batch">📦 Dura 1 semana en heladera</div>
+        <div class="r-ing"><span class="r-ing-label">Ingredientes</span>1 lata o 1 taza garbanzos cocidos FRÍOS (bien enjuagados) · 1-2 dientes ajo crudo · 2 cdas jugo de limón fresco · 2-3 cdas aceite de oliva EV · sal marina · agua o aquafaba (agua de cocción) c/n · opcional: 2 cdas tahine · opcional: cúrcuma + pimienta negra</div>
+        <div class="r-paso">Procesar todo en la picadora Daewoo hasta crema suave. Agregar agua de a poco hasta la consistencia deseada. Ajustar limón y sal. Guardar en frasco de vidrio en heladera.</div>
+        <div class="r-nota">💡 Variante betalaínas: agregar 1 remolacha cocida → hummus de remolacha. Variante inulina: agregar puerro salteado. El ajo crudo suma inulina prebiótica.</div>
+      </div>
+    </div>
+
+    <div class="receta">
+      <div class="r-head" style="background:linear-gradient(135deg,#6a1b9a,#ab47bc)">
+        <span class="r-emoji">🟣</span><span class="r-nombre">Hummus de remolacha</span><span class="r-tiempo">⏱ 5 min</span>
+      </div>
+      <div class="r-body">
+        <div class="r-badge prebiotico">🦠 Betalaínas antiinflamatorias</div>
+        <div class="r-ing"><span class="r-ing-label">Ingredientes</span>1 remolacha mediana cruda O cocida · 1 taza garbanzos cocidos FRÍOS · 2 cdas oliva EV · jugo de 1/2 limón · sal marina · 1 diente ajo · opcional: 1 cda tahine · agua c/n</div>
+        <div class="r-paso">Si es cruda: rallar finamente con el rayador eléctrico. Procesar todo hasta crema. Ajustar con agua. Guardar en frasco en heladera.</div>
+        <div class="r-nota">💡 Cruda = más betalaínas. Cocida = más prebiótico de almidón. Ambas opciones son excelentes. El color fucsia intenso es señal de los compuestos bioactivos.</div>
+      </div>
+    </div>
+
+    <div class="receta">
+      <div class="r-head" style="background:linear-gradient(135deg,var(--g2),var(--g3))">
+        <span class="r-emoji">🟤</span><span class="r-nombre">Paté de lentejas</span><span class="r-tiempo">⏱ 5 min</span>
+      </div>
+      <div class="r-body">
+        <div class="r-badge batch">📦 Dura 5 días en heladera</div>
+        <div class="r-ing"><span class="r-ing-label">Ingredientes</span>1 taza lentejas cocidas FRÍAS · 1 diente ajo crudo · 1 cda oliva EV · jugo de limón · sal · cúrcuma + comino + pimienta · opcional: 100g champignones salteados para paté de lentejas y hongos</div>
+        <div class="r-paso">Procesar lentejas con ajo, oliva, limón y especias. Agregar agua si queda muy espeso. Ajustar sabor. Guardar en frasco en heladera.</div>
+        <div class="r-nota">💡 Con champignones salteados queda el paté de lentejas + hongos — suma betaglucanos prebióticos de los hongos a la proteína + hierro de las lentejas.</div>
+      </div>
+    </div>
+
+    <div class="receta">
+      <div class="r-head" style="background:linear-gradient(135deg,var(--t1),var(--t3))">
+        <span class="r-emoji">🌻</span><span class="r-nombre">Queso untable de semillas de girasol</span><span class="r-tiempo">⏱ 5 min + remojo 8hs</span>
+      </div>
+      <div class="r-body">
+        <div class="r-ing"><span class="r-ing-label">Ingredientes</span>1 taza semillas de girasol activadas (remojo 8hs, escurrir) · jugo de 1 limón · 2 cdas oliva EV · sal marina · ajo en polvo · cúrcuma · agua c/n para procesar · opcional: levadura nutricional para sabor más intenso</div>
+        <div class="r-paso">Escurrir las semillas remojadas. Procesar en picadora Daewoo con limón, oliva y especias. Agregar agua de a poco hasta cremoso. Guardar en frasco en heladera.</div>
+        <div class="r-nota">💡 Alternativa al hummus sin legumbres. Alta en vitamina E antioxidante. La levadura nutricional enriquecida con B12 le da sabor a queso y suma el nutriente más crítico.</div>
+      </div>
+    </div>
+
+    <div class="receta">
+      <div class="r-head" style="background:linear-gradient(135deg,var(--a1),var(--a3))">
+        <span class="r-emoji">🍓</span><span class="r-nombre">Mermelada de frutillas con chía</span><span class="r-tiempo">⏱ 15 min</span>
+      </div>
+      <div class="r-body">
+        <div class="r-badge prebiotico">🦠 Sin azúcar añadida</div>
+        <div class="r-ing"><span class="r-ing-label">Ingredientes</span>200g frutillas frescas o congeladas · 2 cdas chía MOLIDA · opcional: 1 cdita extracto de vainilla · opcional: stevia o miel de dátiles al gusto</div>
+        <div class="r-paso">Calentar las frutillas en sartén a fuego bajo aplastando con tenedor 5-8 min hasta que suelten jugo. Apagar el fuego. Agregar la chía molida y mezclar bien. Dejar enfriar. Guardar en frasco de vidrio en heladera.</div>
+        <div class="r-nota">💡 La chía molida espesa naturalmente sin azúcar ni pectina comercial. Dura 1 semana en heladera. Funciona con cualquier fruta de estación — frutillas, mango, durazno.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- DULCES -->
+  <div id="cat-dulce" class="cat-section">
+
+    <div class="receta">
+      <div class="r-head" style="background:linear-gradient(135deg,#6a1b9a,#ab47bc)">
+        <span class="r-emoji">🍫</span><span class="r-nombre">Brownie de remolacha</span><span class="r-tiempo">⏱ 35 min</span>
+      </div>
+      <div class="r-body">
+        <div class="r-badge batch">📦 Batch — postre toda la semana</div>
+        <div class="r-ing"><span class="r-ing-label">Ingredientes</span>3 remolachas medianas hervidas y enfriadas · 1/3 taza pasas de uva · 2 cdas chía MOLIDA · 60ml agua · 2 cdas oliva EV · 1 cda sopera cacao amargo · 1 cdita bicarbonato de sodio · 1 taza harina de garbanzos · opcional: extracto de vainilla · opcional: chips de chocolate 70%</div>
+        <div class="r-paso">Procesar remolachas + pasas + chía molida + agua hasta pasta homogénea. Agregar oliva, cacao, bicarbonato y harina. Integrar bien. Llevar a fuente aceitada con oliva. Horno eléctrico Winco precalentado 180° por 25 minutos. Dejar enfriar completamente antes de cortar.</div>
+        <div class="r-nota">💡 Sin azúcar, sin gluten, sin lácteos, sin harinas refinadas. La remolacha da humedad + betalaínas antiinflamatorias. Los chips de chocolate 70% al final suman polifenoles.</div>
+      </div>
+    </div>
+
+    <div class="receta">
+      <div class="r-head" style="background:linear-gradient(135deg,var(--a1),var(--a3))">
+        <span class="r-emoji">🍪</span><span class="r-nombre">Galletitas de lentejas + coco + dátiles</span><span class="r-tiempo">⏱ 15 min</span>
+      </div>
+      <div class="r-body">
+        <div class="r-badge batch">📦 3 ingredientes — sin horno si querés</div>
+        <div class="r-ing"><span class="r-ing-label">Ingredientes (12-15 unidades)</span>1 taza lentejas turcas o rojas cocidas (previo remojo 12hs) · 1/2 taza coco rallado sin azúcar · 6-8 dátiles descarozados rehidratados en agua caliente · opcional: 1 cda cacao amargo · opcional: 1 cdita canela</div>
+        <div class="r-paso">Procesar lentejas con dátiles hasta pasta. Agregar coco y mezclar. Opción 1 sin horno: armar bolitas y aplastar, heladera. Opción 2 con horno: formar en placa aceitada y hornear 180° 10-12 minutos.</div>
+        <div class="r-nota">💡 Las más simples de todos los recetarios. Sin horno quedan mejor en la heladera — tipo "raw cookies". Duran 5 días en heladera o 3 meses en freezer.</div>
+      </div>
+    </div>
+
+    <div class="receta">
+      <div class="r-head" style="background:linear-gradient(135deg,var(--g2),var(--g3))">
+        <span class="r-emoji">🥧</span><span class="r-nombre">Postre de lino (más cremoso que la chía)</span><span class="r-tiempo">⏱ 5 min + 1hs heladera</span>
+      </div>
+      <div class="r-body">
+        <div class="r-ing"><span class="r-ing-label">Ingredientes (1 porción)</span>3 cdas lino MOLIDO en el momento · 1 banana madura · 1 cda cacao amargo · 150ml leche vegetal · opcional: 1 cdita extracto de vainilla · topping: frutos rojos + nueces</div>
+        <div class="r-paso">Moler el lino en el momento con el molinillo de acero. Licuar o pisar la banana con el cacao y la leche. Agregar el lino molido y mezclar bien. Refrigerar 1 hora. Servir con toppings.</div>
+        <div class="r-nota">💡 El lino molido aporta omega 3 + fibra + lignanos. Consumir SIEMPRE recién molido o dentro de los 10 días de molido — el omega 3 se oxida rápido.</div>
+      </div>
+    </div>
+
+    <div class="receta">
+      <div class="r-head" style="background:linear-gradient(135deg,#6a1b9a,#ab47bc)">
+        <span class="r-emoji">🟣</span><span class="r-nombre">Puré rosa (postre / guarnición)</span><span class="r-tiempo">⏱ 30 min + enfriar</span>
+      </div>
+      <div class="r-body">
+        <div class="r-badge prebiotico">🦠 Triple efecto</div>
+        <div class="r-ing"><span class="r-ing-label">Ingredientes (2 porciones)</span>1 papa grande · 1 remolacha grande · 2 cdas oliva EV · sal marina · pimienta negra · ajo en polvo · sésamo tostado para servir</div>
+        <div class="r-paso">Hervir papa y remolacha juntas hasta tiernas. Procesar con el minipimer directo en la olla con oliva, sal y condimentos. Dejar enfriar completamente. Refrigerar. Servir FRÍO con sésamo encima.</div>
+        <div class="r-nota">💡 Frío = almidón resistente de la papa + betalaínas de la remolacha + calcio del sésamo. Triple efecto antiinflamatorio y prebiótico en un solo plato.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- RAPIDAS -->
+  <div id="cat-rapidas" class="cat-section">
+
+    <div class="alert g" style="margin-top:4px"><strong>⚡ Todas en 15 minutos o menos.</strong> Con las bases del batch cooking ya hechas, estas recetas son automáticas. Sin decisiones, sin función ejecutiva.</div>
+
+    <div class="receta" style="margin-top:12px">
+      <div class="r-head" style="background:linear-gradient(135deg,var(--g2),var(--g3))">
+        <span class="r-emoji">🍕</span><span class="r-nombre">Pizza de lentejas</span><span class="r-tiempo">⏱ 5 min activos</span>
+      </div>
+      <div class="r-body">
+        <div class="r-badge tdah">🧠 TDAH — sin harina, sin gluten</div>
+        <div class="r-badge prebiotico">🦠 Prebiótico</div>
+        <div class="r-ing"><span class="r-ing-label">Ingredientes (1 base)</span>100g lentejas secas REMOJADAS 12hs + enjuagadas · 100ml agua · sal + condimentos a gusto (orégano, cúrcuma, ajo en polvo)</div>
+        <div class="r-paso">Licuar lentejas remojadas + agua + sal hasta pasta fluida. Esparcir sobre placa con papel manteca + oliva. Horno Winco 180° hasta que quede crocante abajo (15-20 min). Topping: tomate + palta + oliva + chucrut. Sin necesidad de salsa ni queso.</div>
+        <div class="r-nota">💡 Las lentejas se pueden dejar remojando la noche anterior — mañana la masa está lista en 2 min de licuadora. La base es prebiótica: las legumbres reducen la glucemia de la comida siguiente.</div>
+      </div>
+    </div>
+
+    <div class="receta">
+      <div class="r-head" style="background:linear-gradient(135deg,var(--a1),var(--a3))">
+        <span class="r-emoji">🧆</span><span class="r-nombre">Falafel (bolitas de garbanzos)</span><span class="r-tiempo">⏱ 10 min</span>
+      </div>
+      <div class="r-body">
+        <div class="r-badge batch">📦 Freezer 3 meses</div>
+        <div class="r-ing"><span class="r-ing-label">Ingredientes (10-12 unidades)</span>200g garbanzos cocidos (previo remojo) · 1 cebolla chica · 1 diente ajo · jugo de ½ limón · sal + pimienta + perejil · ½ taza harina de garbanzos o sarraceno</div>
+        <div class="r-paso">Procesar garbanzos + cebolla + ajo en la picadora Daewoo. Agregar harina + condimentos + limón. Armar bolitas. Cocinar en sartén tapada con oliva hasta dorar de ambos lados (5 min). O airfryer 200° 12 min.</div>
+        <div class="r-nota">💡 Los garbanzos tienen TODOS los aminoácidos esenciales. Hacer en tanda y freezar — al sacarlos se calientan en 5 min en el airfryer. Acompañar con hummus + vegetales crudos.</div>
+      </div>
+    </div>
+
+    <div class="receta">
+      <div class="r-head" style="background:linear-gradient(135deg,var(--t1),var(--t3))">
+        <span class="r-emoji">🌿</span><span class="r-nombre">Farinata (torta asada de garbanzos)</span><span class="r-tiempo">⏱ 2 min activos + reposo</span>
+      </div>
+      <div class="r-body">
+        <div class="r-badge tdah">🧠 TDAH — preparar la noche anterior</div>
+        <div class="r-ing"><span class="r-ing-label">Ingredientes</span>1 taza harina de garbanzos · ¾ taza agua · sal + condimentos (cúrcuma, orégano, ajo) · 2 cdas oliva EV</div>
+        <div class="r-paso">La noche anterior: mezclar todo en frasco o tupper. Tapar. Dejar reposar 8-12hs (aumenta digestibilidad). A la mañana o mediodía: revolver, volcar en placa aceitada, horno Winco 180° 20-25 min. Queda crocante afuera y suave adentro.</div>
+        <div class="r-nota">💡 El reposo de 8-12hs actúa como fermentación parcial — reduce antinutrientes y hace los nutrientes más biodisponibles. Preparar la noche anterior = 0 trabajo al día siguiente.</div>
+      </div>
+    </div>
+
+    <div class="receta">
+      <div class="r-head" style="background:linear-gradient(135deg,var(--b1),var(--b3))">
+        <span class="r-emoji">🍝</span><span class="r-nombre">Wok de arroz yamaní con verduras</span><span class="r-tiempo">⏱ 10 min</span>
+      </div>
+      <div class="r-body">
+        <div class="r-badge prebiotico">🦠 Almidón resistente</div>
+        <div class="r-ing"><span class="r-ing-label">Ingredientes (1 porción)</span>1 taza arroz yamaní FRÍO (cocido día anterior) · ½ taza arvejas o garbanzos · zanahoria en juliana · cebolla + ajo · 1 cda oliva EV · cúrcuma + pimienta negra al final · opcional: 1 cda levadura nutricional + semillas de sésamo</div>
+        <div class="r-paso">Saltear cebolla + ajo en oliva 3 min. Agregar zanahoria 2 min. Sumar el arroz FRÍO (no calentarlo antes — así mantiene el almidón resistente). Revolver. Agregar arvejas. Al final: cúrcuma + pimienta. Servir con levadura nutricional y sésamo encima.</div>
+        <div class="r-nota">💡 El arroz yamaní FRÍO tiene almidón resistente prebiótico. La cúrcuma + pimienta negra siempre al FINAL de la cocción para no destruir la curcumina.</div>
+      </div>
+    </div>
+
+    <div class="receta">
+      <div class="r-head" style="background:linear-gradient(135deg,var(--p1),var(--p3))">
+        <span class="r-emoji">🍝</span><span class="r-nombre">Fideos de legumbres con rawmesan</span><span class="r-tiempo">⏱ 15 min</span>
+      </div>
+      <div class="r-body">
+        <div class="r-badge rapido">⚡ Rápido y reconfortante</div>
+        <div class="r-ing"><span class="r-ing-label">Fideos + salteado</span>100g fideos de legumbres (lentejas, garbanzos o arroz integral) · ajo + cebolla + champignones + pimiento + zanahoria en juliana · oliva EV · salsa de soja sin glutamato · semillas de sésamo</div>
+        <div class="r-ing"><span class="r-ing-label">Rawmesan (2 min)</span>3 cdas levadura nutricional · 2 cdas semillas molidas o castañas de cajú procesadas · pizca de sal · pizca de ajo en polvo → mezclar en frasco</div>
+        <div class="r-paso">Hervir fideos al dente. Saltear verduras en oliva 5 min. Mezclar fideos con verduras. Agregar soja + sésamo. Servir con rawmesan encima generoso.</div>
+        <div class="r-nota">💡 El rawmesan da sabor "umami" tipo queso sin lácteos. La levadura nutricional aporta vitaminas B + zinc + B12 si está enriquecida. Hacer un frasco grande dura 2 semanas.</div>
+      </div>
+    </div>
+
+    <div class="receta">
+      <div class="r-head" style="background:linear-gradient(135deg,var(--g2),var(--g3))">
+        <span class="r-emoji">🧆</span><span class="r-nombre">Albóndigas de lentejas</span><span class="r-tiempo">⏱ 15 min</span>
+      </div>
+      <div class="r-body">
+        <div class="r-badge batch">📦 Freezer 3 meses</div>
+        <div class="r-ing"><span class="r-ing-label">Ingredientes (10-12 unidades)</span>2 tazas lentejas cocidas · 2 rodajas grandes de calabaza cocida (o más quinoa si es hervida) · ½ taza quinoa en copos o avena instantánea · sal + condimentos (ajo, cúrcuma, comino)</div>
+        <div class="r-paso">Procesar todo pero dejar algunas lentejas enteras para textura (o pisar con tenedor). Armar bolitas. En sartén con oliva: dorar de ambos lados tapada hasta formar costra. También funcionan en airfryer 180° 12 min.</div>
+        <div class="r-nota">💡 El aminoácido limitante de las lentejas es la metionina — pero si en otra comida del día hay arroz yamaní o quinoa, la proteína queda completa. Hacer en batch y freezar.</div>
+      </div>
+    </div>
+
+    <div class="receta">
+      <div class="r-head" style="background:linear-gradient(135deg,var(--a1),var(--a3))">
+        <span class="r-emoji">🥔</span><span class="r-nombre">Croquetas de papa y porotos</span><span class="r-tiempo">⏱ 5 min activos + cocción</span>
+      </div>
+      <div class="r-body">
+        <div class="r-badge prebiotico">🦠 Doble almidón resistente</div>
+        <div class="r-ing"><span class="r-ing-label">Ingredientes (8-10 unidades)</span>1 taza porotos alubia cocidos (previo remojo) · 1 taza arroz integral FRÍO o papa cocida y ENFRIADA 12hs · ajo + perejil + sal · opcional: harina de maíz blanco para rebozar</div>
+        <div class="r-paso">Procesar todo junto con tenedor o picadora (no demasiado — dejar textura). Armar bolitas. Sartén tapada con oliva 15 min de un lado, dar vuelta 10 min. O airfryer 200° 15 min.</div>
+        <div class="r-nota">💡 Papa + arroz FRÍOS = doble almidón resistente prebiótico. Cuanto más frías estén antes de procesar, mejor. Acompañar con ensalada + semillas molidas encima.</div>
+      </div>
+    </div>
+
+    <div class="receta">
+      <div class="r-head" style="background:linear-gradient(135deg,var(--t1),var(--t3))">
+        <span class="r-emoji">🥞</span><span class="r-nombre">Panqueques de sarraceno + garbanzos</span><span class="r-tiempo">⏱ 10 min</span>
+      </div>
+      <div class="r-body">
+        <div class="r-badge batch">📦 Freezer 3 meses</div>
+        <div class="r-ing"><span class="r-ing-label">Ingredientes (10-12 unidades)</span>½ taza harina de sarraceno · ½ taza harina de garbanzos · 1 cdita polvo de hornear · 2 cdas oliva EV · 1 banana madura · ½ taza agua + chorrito de soda · opcional: extracto de vainilla</div>
+        <div class="r-paso">Licuar todos los ingredientes. Cocinar en sandwichera eléctrica (los más fáciles) o panquequera tapada. Dorar de ambos lados. Dejar enfriar completamente antes de freezar con papel manteca entre cada uno.</div>
+        <div class="r-nota">💡 Alta en calcio (sésamo de la harina de garbanzos) y proteína. Descongelan solos en el tupper mientras te trasladás. Topping: mermelada de chía + tahine o hummus + palta.</div>
+      </div>
+    </div>
+
+    <div class="receta">
+      <div class="r-head" style="background:linear-gradient(135deg,#6a1b9a,#ab47bc)">
+        <span class="r-emoji">🌰</span><span class="r-nombre">Barritas de semillas</span><span class="r-tiempo">⏱ 10 min + heladera</span>
+      </div>
+      <div class="r-body">
+        <div class="r-badge batch">📦 Heladera 1 semana · Freezer 3 meses</div>
+        <div class="r-ing"><span class="r-ing-label">Ingredientes</span>150g pasas de uva · 3 cdas castañas de cajú · 2 cdas coco rallado · 2 cdas semillas de chía · 50g semillas de calabaza · 50g quinoa en copos precocida · 2 cdas cacao amargo · 2 cdas pasta de maní · 2 cdas aceite de coco · 1 manzana chica</div>
+        <div class="r-paso">Procesar todo hasta antes de ser pasta (dejar textura con trozos). Esparcir sobre placa o fuente. Heladera 2hs. Cortar en porciones y guardar. Sin horno, sin cocción.</div>
+        <div class="r-nota">💡 Magnesio + zinc + selenio en una sola barra — los tres minerales más importantes para el sistema inmune. La manzana da pectina prebiótica. Cajú + chía + sésamo = calcio vegetal concentrado.</div>
+      </div>
+    </div>
+
+    <div class="receta">
+      <div class="r-head" style="background:linear-gradient(135deg,var(--g2),var(--g3))">
+        <span class="r-emoji">🍄</span><span class="r-nombre">Milanesas de hongo melena de león</span><span class="r-tiempo">⏱ 15 min</span>
+      </div>
+      <div class="r-body">
+        <div class="r-badge rapido">⚡ El plato más sorprendente</div>
+        <div class="r-ing"><span class="r-ing-label">Ingredientes (2 porciones)</span>2 hongos melena de león grandes (o champignones portobello si no conseguís) · 2 cdas semillas de chía + 4 cdas agua (gel — reposar 10 min) · 3 cdas semillas molidas para rebozar · cúrcuma + pimentón + sal · oliva EV</div>
+        <div class="r-paso">Cortar el hongo en rodajas de 1.5cm. Mojar en el gel de chía (esto reemplaza el huevo). Pasar por las semillas molidas condimentadas. Airfryer 200° 12 min o sartén con oliva 5 min por lado tapada.</div>
+        <div class="r-nota">💡 El hongo melena de león tiene propiedades neuroprotectoras estudiadas. El gel de chía reemplaza el huevo y suma omega 3. Acompañar con puré de calabaza + ensalada.</div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<!-- ══ BEBIDAS ══ -->
+<div id="page-bebidas" class="page">
+  <div class="big-title">Bebidas</div>
+  <div class="big-sub">Lo que tomás importa tanto como lo que comés</div>
+
+  <div class="alert p"><strong>El mate y el té bloquean el hierro.</strong> No tomar mate, té negro ni café 1 hora antes o después de las legumbres — los taninos bloquean hasta el 70% de la absorción de hierro vegetal.</div>
+
+  <div class="sec-hdr"><div class="sec-dot" style="background:var(--a3)"></div><div class="sec-ttl" style="color:var(--a1)">🧉 El mate — cómo tomarlo sin perder hierro</div></div>
+  <div class="card"><div class="cband a"></div><div class="c-body" style="padding-top:12px">
+    <div class="item a"><span class="ilabel">El problema</span>Los taninos del mate, té y café forman complejos con el hierro vegetal y bloquean su absorción. No es que el mate sea malo — es la combinación con legumbres y semillas lo que hay que espaciar.</div>
+    <div class="item a"><span class="ilabel">La regla práctica</span>Esperar 1 hora después de comer legumbres, espinaca o semillas antes de tomar mate. O tomarlo antes de la comida, no después.</div>
+    <div class="item a"><span class="ilabel">Con qué tomar el mate</span>Acompañar con frutos secos (nueces, cajú, almendras) en vez de galletitas. Unas gotas de limón al mate contrarrestan parcialmente el efecto de los taninos.</div>
+    <div class="item a"><span class="ilabel">El café</span>Igual que el mate. Tomarlo 1hs antes o 1hs después de las comidas principales. 1-2 por día sin azúcar no inflaman.</div>
+  </div></div>
+
+  <div class="sec-hdr"><div class="sec-dot"></div><div class="sec-ttl">Recetas de bebidas</div></div>
+
+  <div class="receta">
+    <div class="r-head" style="background:linear-gradient(135deg,var(--g2),var(--g3))">
+      <span class="r-emoji">🍋</span><span class="r-nombre">Limonada de jengibre y menta</span><span class="r-tiempo">⏱ 3 min</span>
+    </div>
+    <div class="r-body">
+      <div class="r-badge tdah">🧠 TDAH — jarra para todo el día</div>
+      <div class="r-ing"><span class="r-ing-label">Ingredientes (1 litro)</span>1 litro agua · jugo de ½ limón · 1 cubito de jengibre del freezer (o 1 cdita jengibre fresco rallado) · hojas de menta fresca · opcional: stevia natural</div>
+      <div class="r-paso">Mezclar todo en jarra. Reposar 5 min. Tomar fría o a temperatura ambiente. Reemplaza cualquier bebida azucarada sin esfuerzo.</div>
+      <div class="r-nota">💡 Hacer en jarra grande = 0 decisiones durante el día. El jengibre congelado va directo sin descongelar.</div>
+    </div>
+  </div>
+
+  <div class="receta">
+    <div class="r-head" style="background:linear-gradient(135deg,var(--a1),var(--a3))">
+      <span class="r-emoji">🌙</span><span class="r-nombre">Golden milk — leche dorada para la noche</span><span class="r-tiempo">⏱ 3 min</span>
+    </div>
+    <div class="r-body">
+      <div class="r-badge tdah">🧠 TDAH — favorece el sueño</div>
+      <div class="r-ing"><span class="r-ing-label">Ingredientes (1 taza)</span>200ml leche vegetal sin endulzar · ½ cdita cúrcuma · ¼ cdita canela de Ceilán · pizca de pimienta negra · pizca de jengibre en polvo · opcional: stevia o miel de dátiles</div>
+      <div class="r-paso">Calentar la leche sin hervir. Agregar especias y revolver. Tomar tibia 1hs antes de dormir.</div>
+      <div class="r-nota">💡 Cúrcuma + pimienta negra + calor = máxima absorción de curcumina. La canela estabiliza la glucemia nocturna. Calma el sistema nervioso antes de dormir.</div>
+    </div>
+  </div>
+
+  <div class="receta">
+    <div class="r-head" style="background:linear-gradient(135deg,var(--t1),var(--t3))">
+      <span class="r-emoji">☕</span><span class="r-nombre">Café de algarroba</span><span class="r-tiempo">⏱ 2 min</span>
+    </div>
+    <div class="r-body">
+      <div class="r-ing"><span class="r-ing-label">Ingredientes</span>1-2 cdas harina de algarroba · 200ml agua caliente o leche vegetal · opcional: canela + vainilla</div>
+      <div class="r-paso">Disolver la algarroba en un poco de agua fría primero (evita grumos). Agregar el resto del agua caliente. Revolver.</div>
+      <div class="r-nota">💡 40g de fibra/100g + 348mg calcio/100g. Sin cafeína, sin taninos → no bloquea el hierro. Perfecto para reemplazar el café de la tarde.</div>
+    </div>
+  </div>
+
+  <div class="receta">
+    <div class="r-head" style="background:linear-gradient(135deg,var(--p1),var(--p3))">
+      <span class="r-emoji">🌿</span><span class="r-nombre">Infusiones carminativas — para gases post legumbres</span><span class="r-tiempo">⏱ 3 min</span>
+    </div>
+    <div class="r-body">
+      <div class="r-ing"><span class="r-ing-label">Las mejores</span>Anís estrellado · hinojo · manzanilla · menta piperita · jengibre solo</div>
+      <div class="r-paso">Infusionar 5-7 min tapado. Tomar después de comer legumbres. También agregar estas hierbas al agua de cocción de las legumbres directamente.</div>
+      <div class="r-nota">💡 Si empezás a comer legumbres y tenés gases — normal. Los primeros 15-20 días el intestino se adapta. Estas infusiones ayudan mucho en esa transición.</div>
+    </div>
+  </div>
+
+  <div class="sec-hdr"><div class="sec-dot"></div><div class="sec-ttl">Guía rápida</div></div>
+  <div class="tbl-wrap"><table class="tbl">
+    <tr><th>Bebida</th><th>Cuándo</th><th>Tip</th></tr>
+    <tr><td>🍋 Limonada jengibre+menta</td><td>Todo el día en jarra</td><td>Reemplaza gaseosas</td></tr>
+    <tr><td>🌙 Golden milk</td><td>1hs antes de dormir</td><td>Cúrcuma+pimienta+canela</td></tr>
+    <tr><td>☕ Café de algarroba</td><td>Mañana o tarde</td><td>Sin cafeína, no bloquea hierro</td></tr>
+    <tr><td>🌿 Manzanilla o hinojo</td><td>Después de legumbres</td><td>Reduce gases</td></tr>
+    <tr><td>🧉 Mate</td><td>Antes de comer (no después)</td><td>1hs de espera post legumbres</td></tr>
+    <tr><td>☕ Café</td><td>Mañana, 1-2 por día</td><td>Sin azúcar, 1hs lejos de comidas con hierro</td></tr>
+    <tr><td>💧 Agua con limón</td><td>Al despertar</td><td>Activa digestión + vitamina C</td></tr>
+  </table></div>
+
+</div>
+
+<!-- ══ FERMENTOS ══ -->
+<div id="page-fermentos" class="page">
+  <div class="big-title">Fermentados Caseros</div>
+  <div class="big-sub">Probióticos vivos — más potentes que los suplementos</div>
+  <div class="alert g"><strong>2-3 cdas de fermentado al día, 3-4 veces por semana</strong> = una de las intervenciones más poderosas para la microbiota.</div>
+
+  <div class="receta" style="margin-top:14px">
+    <div class="r-head" style="background:linear-gradient(135deg,var(--g2),var(--g3))">
+      <span class="r-emoji">🥬</span><span class="r-nombre">Chucrut casero (2 ingredientes)</span><span class="r-tiempo">⏱ 15 min activos</span>
+    </div>
+    <div class="r-body">
+      <div class="r-badge batch">📦 Dura meses en heladera</div>
+      <div class="r-ing"><span class="r-ing-label">Ingredientes</span>1 kg repollo blanco o morado · 20g sal marina (2% del peso — pesar con balanza). Opcional: zanahoria rallada + comino + manzana en tiras</div>
+      <div class="r-paso">1. Cortar el repollo finamente. 2. Agregar 20g de sal y masajear con las manos 5-10 min hasta que suelte líquido. 3. Prensar en frasco de vidrio — el líquido debe cubrir el repollo. Si no alcanza, agregar salmuera al 2% (20g sal/litro agua). 4. Poner un peso encima para mantenerlo sumergido. 5. Tapar con tela (NO hermético). 6. Fermentar a temperatura ambiente 2-6 semanas. 7. Probar desde la semana 2. Cuando tenga el sabor ácido deseado → tapar hermético y heladera.</div>
+      <div class="r-nota">Una película superficial blanca puede aparecer → retirar y continuar es normal. Moho de colores → descartar. Dura varios meses en frío.</div>
+    </div>
+  </div>
+
+  <div class="receta">
+    <div class="r-head" style="background:linear-gradient(135deg,var(--p1),var(--p3))">
+      <span class="r-emoji">💧</span><span class="r-nombre">Kéfir de agua</span><span class="r-tiempo">⏱ 5 min + 24-48hs</span>
+    </div>
+    <div class="r-body">
+      <div class="r-ing"><span class="r-ing-label">Ingredientes</span>Nódulos de kéfir de agua (tiendas naturistas o grupos Facebook) · 1 litro agua filtrada · 3-4 cdas azúcar mascabo · 1 higo seco o dátil</div>
+      <div class="r-paso">Disolver azúcar en agua. Agregar nódulos y el higo en frasco de vidrio. Tapar con tela. Fermentar 24-48hs a temperatura ambiente. Colar los nódulos (se reusan). Guardar en heladera.</div>
+      <div class="r-nota">Los nódulos se reusan indefinidamente si se cuidan. Se pueden saborizar con jengibre o limón.</div>
+    </div>
+  </div>
+
+  <div class="receta">
+    <div class="r-head" style="background:linear-gradient(135deg,var(--a1),var(--a3))">
+      <span class="r-emoji">🍎</span><span class="r-nombre">Vinagre de manzana con madre</span><span class="r-tiempo">⏱ 1-3 meses</span>
+    </div>
+    <div class="r-body">
+      <div class="r-ing"><span class="r-ing-label">Ingredientes</span>1.5-2 kg manzanas orgánicas con cáscara y corazón · agua filtrada hasta cubrir · 20-30g azúcar o miel · 200ml vinagre sin pasteurizar (iniciador opcional)</div>
+      <div class="r-paso">ETAPA 1 (alcoholica, 1-3 semanas): Manzanas cortadas en frasco. Cubrir con agua azucarada. Tela. Remover 1-2x/semana. Cuando huela a sidra → colar. ETAPA 2 (acetica, 3-6 semanas): Devolver líquido al frasco con el vinagre iniciador. Tela. Cuando tenga acidez deseada → embotellar.</div>
+      <div class="r-nota">Una película gelatinosa translúcida = la MADRE formándose → buena señal. Moho peludo → descartar.</div>
+    </div>
+  </div>
+
+  <div class="sec-hdr"><div class="sec-dot"></div><div class="sec-ttl">Cuándo usar cada uno</div></div>
+  <div class="tbl-wrap"><table class="tbl">
+    <tr><th>Fermento</th><th>Cuándo</th><th>Cuánto</th></tr>
+    <tr><td>Chucrut</td><td>Con almuerzo o cena</td><td>2-3 cdas, 3-4x semana</td></tr>
+    <tr><td>Kéfir de agua</td><td>Entre comidas o con desayuno</td><td>1 vaso (150ml)</td></tr>
+    <tr><td>Vinagre con madre</td><td>ANTES de la comida principal</td><td>1 cda en agua</td></tr>
+    <tr><td>Yogur de coco (yogurtera)</td><td>Desayuno o merienda</td><td>1 vasito</td></tr>
+    <tr><td>Escabeche o conserva</td><td>Con almuerzos y cenas como condimento</td><td>2-3 cdas</td></tr>
+  </table></div>
+
+  <div class="sec-hdr"><div class="sec-dot" style="background:var(--p3)"></div><div class="sec-ttl" style="color:var(--p1)">Escabeches y conservas caseras</div></div>
+  <div class="alert g">Más fáciles que los fermentos — se hacen en 15 min. No tienen probióticos vivos pero sí prebióticos, polifenoles y sabor que hace que comer sano sea rico.</div>
+
+  <div class="receta" style="margin-top:12px">
+    <div class="r-head" style="background:linear-gradient(135deg,var(--p1),var(--p3))">
+      <span class="r-emoji">🍆</span><span class="r-nombre">Escabeche de berenjena</span><span class="r-tiempo">⏱ 15 min + 24hs reposo</span>
+    </div>
+    <div class="r-body">
+      <div class="r-badge batch">📦 Heladera 2-3 semanas</div>
+      <div class="r-ing"><span class="r-ing-label">Ingredientes</span>2 berenjenas medianas · sal marina · vinagre de manzana sin pasteurizar · aceite de oliva EV · ajo picado · orégano · opcional: pimiento morrón rojo en tiras · opcional: ají molido</div>
+      <div class="r-paso">Cortar berenjenas en rodajas finas o cubos. Salar generosamente y dejar 30 min (sueltan agua amarga). Enjuagar y escurrir bien. Llevar a olla con vinagre diluido en agua (mitad y mitad) hasta cubrir. Cocinar 5-7 min hasta tiernas pero firmes. Escurrir. En frasco de vidrio: capas de berenjena + ajo + orégano. Cubrir con oliva EV. Heladera 24hs antes de consumir.</div>
+      <div class="r-nota">💡 Acompaña el pan chato, las fajitas, los bowls y las cenas. Es el untable/condimento que hace que las viandas sean más ricas sin esfuerzo extra.</div>
+    </div>
+  </div>
+
+  <div class="receta">
+    <div class="r-head" style="background:linear-gradient(135deg,var(--t1),var(--t3))">
+      <span class="r-emoji">🍄</span><span class="r-nombre">Champignones en conserva</span><span class="r-tiempo">⏱ 15 min + reposo</span>
+    </div>
+    <div class="r-body">
+      <div class="r-badge batch">📦 Heladera 2 semanas</div>
+      <div class="r-ing"><span class="r-ing-label">Ingredientes</span>500g champignones frescos enteros o mitades · vinagre de manzana · agua · ajo · laurel · pimienta negra en grano · sal marina · oliva EV para cubrir</div>
+      <div class="r-paso">Limpiar los champignones. Llevar a olla con agua + vinagre + sal + laurel hasta cubrir. Hervir 5 min. Escurrir. En frasco de vidrio: champignones + ajo + pimienta. Cubrir con oliva EV. Heladera.</div>
+      <div class="r-nota">💡 Los champignones aportan betaglucanos prebióticos. En conserva de oliva suman también polifenoles. Directos a ensaladas, bowls y cenas frías sin cocinar nada.</div>
+    </div>
+  </div>
+
+  <div class="receta">
+    <div class="r-head" style="background:linear-gradient(135deg,var(--a1),var(--a3))">
+      <span class="r-emoji">🧄</span><span class="r-nombre">Conserva de ajo en oliva</span><span class="r-tiempo">⏱ 5 min</span>
+    </div>
+    <div class="r-body">
+      <div class="r-badge batch">📦 Heladera 3 semanas</div>
+      <div class="r-ing"><span class="r-ing-label">Ingredientes</span>2 cabezas de ajo enteras peladas · aceite de oliva EV hasta cubrir · opcional: romero o tomillo</div>
+      <div class="r-paso">Pelar los dientes de ajo. Poner en frasco de vidrio limpio. Cubrir completamente con oliva EV. Cerrar y heladera. Los ajos se ablandan y el aceite absorbe el sabor — ambos se usan.</div>
+      <div class="r-nota">💡 El aceite de ajo queda perfectamente condimentado para aliñar ensaladas, hummus y tostadas. El ajo confit se puede untar directamente en el pan. Inulina prebiótica concentrada.</div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ══ GLUCEMIA ══ -->
+<div id="page-glucemia" class="page">
+  <div class="big-title">Control de Glucemia</div>
+  <div class="big-sub">Energía estable = concentración estable = menos síntomas TDAH</div>
+
+  <div class="card"><div class="cband a"></div>
+    <div class="c-head"><span class="c-icon">⚡</span><div><div class="c-title">Estrategias rompe-curvas</div><div class="c-sub">Aplicar en cada comida</div></div></div>
+    <div class="c-body">
+      <div class="item a"><span class="ilabel">Antes de comer</span>1 cda vinagre de manzana en agua → mejora sensibilidad a la insulina</div>
+      <div class="item a"><span class="ilabel">Orden del plato</span>Primero vegetales o proteínas, DESPUÉS los hidratos</div>
+      <div class="item a"><span class="ilabel">Después de comer</span>Caminar 10-15 min → músculos usan la glucosa circulante</div>
+      <div class="item a"><span class="ilabel">En cada comida</span>Nunca hidratos solos — siempre proteína + grasa + fibra</div>
+      <div class="item a"><span class="ilabel">Frutas</span>Enteras con cáscara, nunca jugos</div>
+      <div class="item a"><span class="ilabel">Canela</span>En desayunos y postres — ayuda a regular glucemia</div>
+    </div>
+  </div>
+
+  <div class="sec-hdr"><div class="sec-dot" style="background:var(--a3)"></div><div class="sec-ttl" style="color:var(--a1)">Polvo de magnesio casero</div></div>
+  <div class="card"><div class="cband a"></div><div class="c-body" style="padding-top:12px">
+    <div class="item a"><span class="ilabel">Proporciones exactas</span>100g semillas calabaza + 100g lino + 50g sésamo + 50g chía + 50g cacao amargo. Todo molido y mezclado. Frasco en heladera máx 15 días.</div>
+    <div class="item a"><span class="ilabel">Dosis</span>3 cdas diarias = 200mg de magnesio → mejora el metabolismo de glucosa, la respuesta a la insulina y el descanso nocturno.</div>
+    <div class="item a"><span class="ilabel">Cómo usarlo</span>En porridge, yogur, smoothie, ensaladas. Se nota diferencia especialmente en el sueño.</div>
+  </div></div>
+</div>
+
+<!-- ══ HABITOS ══ -->
+<div id="page-habitos" class="page">
+  <div class="big-title">Los 11 Hábitos</div>
+  <div class="big-sub">Más allá de la comida — salud integral</div>
+  <div class="tags">
+    <span class="tag">🥗 Comida real</span><span class="tag">⏰ Ayuno nocturno</span><span class="tag">🏃 Ejercicio</span>
+    <span class="tag">☀️ Sol 15-20min</span><span class="tag">😴 Dormir 7-8hs</span><span class="tag">🌳 Naturaleza</span>
+    <span class="tag">🦶 Grounding</span><span class="tag">🌡️ Calor/frío</span><span class="tag">🧂 Sal/Magnesio</span>
+    <span class="tag">🧘 Meditar</span><span class="tag">😂 Reír</span>
+  </div>
+
+  <button class="col-btn" onclick="col(this)" style="margin-top:16px"><span class="col-icon">😴</span><div class="col-text"><div class="col-title">Sueño — crítico para TDAH</div><div class="col-sub">La privación imita y amplifica todos los síntomas</div></div><span class="col-arr">▼</span></button>
+  <div class="col-body">
+    <div class="item"><span class="ilabel">Por qué</span>Privación del sueño altera glucosa, insulina, cortisol, grelina y leptina. Amplifica TODOS los síntomas del TDAH.</div>
+    <div class="item"><span class="ilabel">Cenar temprano</span>Cenar antes de las 21hs permite que suba la melatonina → mejor sueño.</div>
+    <div class="item"><span class="ilabel">Castañas de cajú en merienda</span>72mg triptófano → precursor de melatonina → mejora la calidad del sueño.</div>
+    <div class="item"><span class="ilabel">Horario fijo</span>Acostarse y levantarse siempre a la misma hora — incluso fines de semana.</div>
+  </div>
+
+  <button class="col-btn" onclick="col(this)"><span class="col-icon">⏰</span><div class="col-text"><div class="col-title">Ayuno nocturno 10-12 horas</div><div class="col-sub">El proceso de limpieza intestinal más importante</div></div><span class="col-arr">▼</span></button>
+  <div class="col-body">
+    <div class="item"><span class="ilabel">Complejo motor migrante</span>Limpia el intestino de residuos y bacterias. Tarda 4-5 horas. Sin este proceso puede desarrollarse SIBO.</div>
+    <div class="item"><span class="ilabel">Cómo lograrlo</span>Cenar a las 20hs + desayunar a las 8hs = 12 horas de ayuno. Fácil y efectivo.</div>
+    <div class="item"><span class="ilabel">Beneficios</span>Mejora sensibilidad a la insulina, reduce marcadores inflamatorios, mejora la digestión.</div>
+  </div>
+
+  <button class="col-btn" onclick="col(this)"><span class="col-icon">🏃</span><div class="col-text"><div class="col-title">Movimiento</div><div class="col-sub">El Ritalín natural más efectivo para TDAH</div></div><span class="col-arr">▼</span></button>
+  <div class="col-body">
+    <div class="item"><span class="ilabel">Mínimo recomendado</span>150 minutos semanales de actividad moderada.</div>
+    <div class="item"><span class="ilabel">Lo más efectivo para glucemia</span>Caminar 10-15 min después de comer — los músculos usan la glucosa circulante.</div>
+    <div class="item"><span class="ilabel">Para TDAH</span>El movimiento libera dopamina. Es complementario a la medicación, no reemplazante.</div>
+  </div>
+</div>
+
+<!-- ══ COMPRAS ══ -->
+<div id="page-compras" class="page">
+  <div class="big-title">Lista de Compras</div>
+  <div class="big-sub">Tildá lo que ya tenés — lo que queda es lo que comprás</div>
+
+  <div class="shop-tabs">
+    <button id="btn-s" class="shop-btn" onclick="showShop('s')" style="background:var(--g2);color:white;border-color:var(--g2)">📅 Semanal</button>
+    <button id="btn-m" class="shop-btn" onclick="showShop('m')" style="background:white;color:var(--g2)">📦 Mensual / Despensa</button>
+  </div>
+
+  <!-- SEMANAL -->
+  <div id="shop-s">
+    <div class="sec-hdr"><div class="sec-dot" style="background:#e53935"></div><div class="sec-ttl" style="color:#b71c1c">🥩 Proteínas animales</div></div>
+    <div class="chk-list">
+      <div class="chk-item"><div class="chk-box" onclick="chkS(this)"></div><div class="chk-label">🐟 Salmón fresco o congelado (300-400g)</div></div>
+      <div class="chk-item"><div class="chk-box" onclick="chkS(this)"></div><div class="chk-label">🥫 Atún al natural en lata (2-3 unidades)</div></div>
+      <div class="chk-item"><div class="chk-box" onclick="chkS(this)"></div><div class="chk-label">🥫 Sardinas o caballa al natural (2 latas)</div></div>
+      <div class="chk-item"><div class="chk-box" onclick="chkS(this)"></div><div class="chk-label">🐟 Merluza u otro pescado blanco (300g)</div></div>
+      <div class="chk-item"><div class="chk-box" onclick="chkS(this)"></div><div class="chk-label">🥚 Huevos de campo o pastoreo (1 docena mínimo)</div></div>
+      <div class="chk-item"><div class="chk-box" onclick="chkS(this)"></div><div class="chk-label">🍗 Pechuga de pollo de campo (400-500g)</div></div>
+    </div>
+
+    <div class="sec-hdr"><div class="sec-dot" style="background:#43a047"></div><div class="sec-ttl" style="color:#1b5e20">🥦 Verduras frescas</div></div>
+    <div class="chk-list">
+      <div class="chk-item"><div class="chk-box" onclick="chkS(this)"></div><div class="chk-label">🥬 Espinaca (500g)</div></div>
+      <div class="chk-item"><div class="chk-box" onclick="chkS(this)"></div><div class="chk-label">🥕 Zanahoria (1kg)</div></div>
+      <div class="chk-item"><div class="chk-box" onclick="chkS(this)"></div><div class="chk-label">🍅 Tomates cherry (500g)</div></div>
+      <div class="chk-item"><div class="chk-box" onclick="chkS(this)"></div><div class="chk-label">🥦 Brócoli (1 cabeza)</div></div>
+      <div class="chk-item"><div class="chk-box" onclick="chkS(this)"></div><div class="chk-label">🍄 Champignones frescos (400g)</div></div>
+      <div class="chk-item"><div class="chk-box" onclick="chkS(this)"></div><div class="chk-label">🫑 Pimiento rojo (2 unidades)</div></div>
+      <div class="chk-item"><div class="chk-box" onclick="chkS(this)"></div><div class="chk-label">🔴 Remolacha (2-3 unidades)</div></div>
+      <div class="chk-item"><div class="chk-box" onclick="chkS(this)"></div><div class="chk-label">🍠 Batata (2 medianas)</div></div>
+      <div class="chk-item"><div class="chk-box" onclick="chkS(this)"></div><div class="chk-label">🥔 Papa (3 medianas)</div></div>
+      <div class="chk-item"><div class="chk-box" onclick="chkS(this)"></div><div class="chk-label">🌿 Puerro (2 unidades)</div></div>
+      <div class="chk-item"><div class="chk-box" onclick="chkS(this)"></div><div class="chk-label">🧅 Ajo y cebolla (repasar stock)</div></div>
+      <div class="chk-item"><div class="chk-box" onclick="chkS(this)"></div><div class="chk-label">🫚 Jengibre fresco (1 trozo para cubitos)</div></div>
+      <div class="chk-item"><div class="chk-box" onclick="chkS(this)"></div><div class="chk-label">🥬 Repollo blanco o morado (1 cabeza — chucrut)</div></div>
+      <div class="chk-item"><div class="chk-box" onclick="chkS(this)"></div><div class="chk-label">🧄 Perejil fresco (1 atado)</div></div>
+    </div>
+
+    <div class="sec-hdr"><div class="sec-dot" style="background:#fb8c00"></div><div class="sec-ttl" style="color:#e65100">🍎 Frutas</div></div>
+    <div class="chk-list">
+      <div class="chk-item"><div class="chk-box" onclick="chkS(this)"></div><div class="chk-label">🥑 Palta (5-6 unidades para que maduren)</div></div>
+      <div class="chk-item"><div class="chk-box" onclick="chkS(this)"></div><div class="chk-label">🍌 Banana (1 racimo — preferir verdes)</div></div>
+      <div class="chk-item"><div class="chk-box" onclick="chkS(this)"></div><div class="chk-label">🍋 Limón (1 bolsa)</div></div>
+      <div class="chk-item"><div class="chk-box" onclick="chkS(this)"></div><div class="chk-label">🍎 Manzana orgánica con cáscara (4-5 unidades)</div></div>
+      <div class="chk-item"><div class="chk-box" onclick="chkS(this)"></div><div class="chk-label">🫐 Arándanos o frutos rojos congelados (500g)</div></div>
+      <div class="chk-item"><div class="chk-box" onclick="chkS(this)"></div><div class="chk-label">🍊 Naranja, kiwi o pera (para snacks y vitamina C)</div></div>
+      <div class="chk-item"><div class="chk-box" onclick="chkS(this)"></div><div class="chk-label">🍓 Frutillas frescas o congeladas (para mermelada)</div></div>
+    </div>
+
+    <div class="sec-hdr"><div class="sec-dot"></div><div class="sec-ttl">🥛 Bebidas y lácteos vegetales</div></div>
+    <div class="chk-list">
+      <div class="chk-item"><div class="chk-box" onclick="chkS(this)"></div><div class="chk-label">🥥 Leche vegetal sin endulzar — coco o almendras (2 cajas)</div></div>
+      <div class="chk-item"><div class="chk-box" onclick="chkS(this)"></div><div class="chk-label">🥥 Leche de coco en lata para yogurtera (1-2 latas)</div></div>
+    </div>
+
+    <div class="card" style="margin-top:16px"><div class="cband"></div><div class="c-body" style="padding-top:10px">
+      <div id="prog-text-s" style="font-size:13px;color:var(--muted);margin-bottom:7px">Tildá lo que ya tenés</div>
+      <div class="prog-bar"><div class="prog-fill" id="prog-fill-s" style="width:0%"></div></div>
+    </div></div>
+    <button onclick="resetShop('s')" style="width:100%;margin-top:8px;padding:10px;border-radius:12px;border:2px solid var(--g5);background:white;color:var(--muted);font-family:'Plus Jakarta Sans',sans-serif;font-size:12px;cursor:pointer;">🔄 Resetear lista semanal</button>
+  </div>
+
+  <!-- MENSUAL -->
+  <div id="shop-m" style="display:none">
+    <div class="alert" style="margin-top:4px"><strong>Comprar en cantidad una vez al mes.</strong> Los secos duran meses. Comprando más cantidad es más económico.</div>
+
+    <div class="sec-hdr"><div class="sec-dot"></div><div class="sec-ttl">🫘 Legumbres</div></div>
+    <div class="chk-list">
+      <div class="chk-item"><div class="chk-box" onclick="chkM(this)"></div><div class="chk-label">Lentejas secas (500g o 1kg)</div></div>
+      <div class="chk-item"><div class="chk-box" onclick="chkM(this)"></div><div class="chk-label">Lentejas turcas o rojas (500g)</div></div>
+      <div class="chk-item"><div class="chk-box" onclick="chkM(this)"></div><div class="chk-label">Garbanzos secos (500g o 1kg)</div></div>
+      <div class="chk-item"><div class="chk-box" onclick="chkM(this)"></div><div class="chk-label">Porotos mung, negros o alubia (500g)</div></div>
+      <div class="chk-item"><div class="chk-box" onclick="chkM(this)"></div><div class="chk-label">Arvejas secas (500g)</div></div>
+    </div>
+
+    <div class="sec-hdr"><div class="sec-dot" style="background:var(--a3)"></div><div class="sec-ttl" style="color:var(--a1)">🌾 Granos y harinas</div></div>
+    <div class="chk-list">
+      <div class="chk-item"><div class="chk-box" onclick="chkM(this)"></div><div class="chk-label">Arroz yamaní (500g)</div></div>
+      <div class="chk-item"><div class="chk-box" onclick="chkM(this)"></div><div class="chk-label">Arroz integral (500g — para dosas)</div></div>
+      <div class="chk-item"><div class="chk-box" onclick="chkM(this)"></div><div class="chk-label">Quinoa (500g)</div></div>
+      <div class="chk-item"><div class="chk-box" onclick="chkM(this)"></div><div class="chk-label">Avena arrollada (500g)</div></div>
+      <div class="chk-item"><div class="chk-box" onclick="chkM(this)"></div><div class="chk-label">Amaranto inflado (200g)</div></div>
+      <div class="chk-item"><div class="chk-box" onclick="chkM(this)"></div><div class="chk-label">⭐ Harina de trigo sarraceno o granos enteros (500g)</div></div>
+      <div class="chk-item"><div class="chk-box" onclick="chkM(this)"></div><div class="chk-label">⭐ Harina de garbanzos (500g)</div></div>
+      <div class="chk-item"><div class="chk-box" onclick="chkM(this)"></div><div class="chk-label">Bicarbonato de sodio (1 paquete)</div></div>
+      <div class="chk-item"><div class="chk-box" onclick="chkM(this)"></div><div class="chk-label">Levadura seca (1 paquete)</div></div>
+      <div class="chk-item"><div class="chk-box" onclick="chkM(this)"></div><div class="chk-label">Polvo de hornear (1 paquete)</div></div>
+    </div>
+
+    <div class="sec-hdr"><div class="sec-dot" style="background:var(--b3)"></div><div class="sec-ttl" style="color:var(--b1)">🌱 Semillas</div></div>
+    <div class="chk-list">
+      <div class="chk-item"><div class="chk-box" onclick="chkM(this)"></div><div class="chk-label">⭐ Semillas de chía (250g o 500g)</div></div>
+      <div class="chk-item"><div class="chk-box" onclick="chkM(this)"></div><div class="chk-label">⭐ Semillas de lino (250g o 500g)</div></div>
+      <div class="chk-item"><div class="chk-box" onclick="chkM(this)"></div><div class="chk-label">⭐ Sésamo integral (250g)</div></div>
+      <div class="chk-item"><div class="chk-box" onclick="chkM(this)"></div><div class="chk-label">⭐ Semillas de calabaza (200g)</div></div>
+      <div class="chk-item"><div class="chk-box" onclick="chkM(this)"></div><div class="chk-label">Semillas de girasol (200g)</div></div>
+      <div class="chk-item"><div class="chk-box" onclick="chkM(this)"></div><div class="chk-label">⭐ Semillas de cáñamo / hemp (200g) — proteína completa</div></div>
+      <div class="chk-item"><div class="chk-box" onclick="chkM(this)"></div><div class="chk-label">⭐ Psyllium en cáscara o polvo (100g) — fibra maestra</div></div>
+    </div>
+
+    <div class="sec-hdr"><div class="sec-dot" style="background:var(--t3)"></div><div class="sec-ttl" style="color:var(--t1)">🌰 Frutos secos</div></div>
+    <div class="chk-list">
+      <div class="chk-item"><div class="chk-box" onclick="chkM(this)"></div><div class="chk-label">Nueces (250g)</div></div>
+      <div class="chk-item"><div class="chk-box" onclick="chkM(this)"></div><div class="chk-label">Almendras (200g)</div></div>
+      <div class="chk-item"><div class="chk-box" onclick="chkM(this)"></div><div class="chk-label">⭐ Castañas de cajú (200g) — triptófano para TDAH</div></div>
+      <div class="chk-item"><div class="chk-box" onclick="chkM(this)"></div><div class="chk-label">Pistachos (150g)</div></div>
+      <div class="chk-item"><div class="chk-box" onclick="chkM(this)"></div><div class="chk-label">⭐ Pasta de maní 100% sin aditivos (1 frasco)</div></div>
+      <div class="chk-item"><div class="chk-box" onclick="chkM(this)"></div><div class="chk-label">Tahine — pasta de sésamo (1 frasco)</div></div>
+    </div>
+
+    <div class="sec-hdr"><div class="sec-dot" style="background:#6d4c41"></div><div class="sec-ttl" style="color:#3e2723">🍫 Dulces naturales</div></div>
+    <div class="chk-list">
+      <div class="chk-item"><div class="chk-box" onclick="chkM(this)"></div><div class="chk-label">⭐ Cacao amargo en polvo (200g)</div></div>
+      <div class="chk-item"><div class="chk-box" onclick="chkM(this)"></div><div class="chk-label">Algarroba en polvo (200g — 40g fibra/100g)</div></div>
+      <div class="chk-item"><div class="chk-box" onclick="chkM(this)"></div><div class="chk-label">Dátiles sin carozo (200g)</div></div>
+      <div class="chk-item"><div class="chk-box" onclick="chkM(this)"></div><div class="chk-label">Pasas de uva (200g)</div></div>
+      <div class="chk-item"><div class="chk-box" onclick="chkM(this)"></div><div class="chk-label">Coco rallado sin azúcar (200g)</div></div>
+      <div class="chk-item"><div class="chk-box" onclick="chkM(this)"></div><div class="chk-label">Chocolate amargo 70-80% (1-2 tabletas)</div></div>
+      <div class="chk-item"><div class="chk-box" onclick="chkM(this)"></div><div class="chk-label">Extracto de vainilla sin azúcar (1 frasquito)</div></div>
+    </div>
+
+    <div class="sec-hdr"><div class="sec-dot"></div><div class="sec-ttl">🫙 Aceites, vinagres y condimentos</div></div>
+    <div class="chk-list">
+      <div class="chk-item"><div class="chk-box" onclick="chkM(this)"></div><div class="chk-label">⭐ Aceite de oliva extra virgen (1 botella grande)</div></div>
+      <div class="chk-item"><div class="chk-box" onclick="chkM(this)"></div><div class="chk-label">Aceite de coco neutro (1 frasco)</div></div>
+      <div class="chk-item"><div class="chk-box" onclick="chkM(this)"></div><div class="chk-label">⭐ Vinagre de manzana SIN PASTEURIZAR (1 botella)</div></div>
+      <div class="chk-item"><div class="chk-box" onclick="chkM(this)"></div><div class="chk-label">Salsa de soja sin glutamato o tamari (1 botella)</div></div>
+      <div class="chk-item"><div class="chk-box" onclick="chkM(this)"></div><div class="chk-label">Sal marina yodada</div></div>
+      <div class="chk-item"><div class="chk-box" onclick="chkM(this)"></div><div class="chk-label">Azúcar mascabo (pequeña cantidad — para kéfir y fermentos)</div></div>
+    </div>
+
+    <div class="sec-hdr"><div class="sec-dot" style="background:#ffd54f"></div><div class="sec-ttl" style="color:#f57f17">🌶️ Especias antiinflamatorias</div></div>
+    <div class="chk-list">
+      <div class="chk-item"><div class="chk-box" onclick="chkM(this)"></div><div class="chk-label">⭐ Cúrcuma en polvo (100g)</div></div>
+      <div class="chk-item"><div class="chk-box" onclick="chkM(this)"></div><div class="chk-label">⭐ Pimienta negra molida (50g) — SIEMPRE con cúrcuma</div></div>
+      <div class="chk-item"><div class="chk-box" onclick="chkM(this)"></div><div class="chk-label">Canela en polvo (50g)</div></div>
+      <div class="chk-item"><div class="chk-box" onclick="chkM(this)"></div><div class="chk-label">Jengibre en polvo (50g)</div></div>
+      <div class="chk-item"><div class="chk-box" onclick="chkM(this)"></div><div class="chk-label">Comino (30g)</div></div>
+      <div class="chk-item"><div class="chk-box" onclick="chkM(this)"></div><div class="chk-label">Pimentón ahumado (30g)</div></div>
+      <div class="chk-item"><div class="chk-box" onclick="chkM(this)"></div><div class="chk-label">Anís estrellado o hinojo en polvo (para gases)</div></div>
+      <div class="chk-item"><div class="chk-box" onclick="chkM(this)"></div><div class="chk-label">Orégano + laurel (para legumbres)</div></div>
+    </div>
+
+    <div class="sec-hdr"><div class="sec-dot" style="background:var(--p3)"></div><div class="sec-ttl" style="color:var(--p1)">🧬 Fermentos, probióticos y extras</div></div>
+    <div class="chk-list">
+      <div class="chk-item"><div class="chk-box" onclick="chkM(this)"></div><div class="chk-label">Nódulos de kéfir de agua (tiendas naturistas o Facebook)</div></div>
+      <div class="chk-item"><div class="chk-box" onclick="chkM(this)"></div><div class="chk-label">Cápsulas de probióticos para yogurtera</div></div>
+      <div class="chk-item"><div class="chk-box" onclick="chkM(this)"></div><div class="chk-label">⭐ Levadura nutricional enriquecida con B12 (1 envase)</div></div>
+      <div class="chk-item"><div class="chk-box" onclick="chkM(this)"></div><div class="chk-label">⭐ Agar agar en polvo (50g) — para gomitas</div></div>
+      <div class="chk-item"><div class="chk-box" onclick="chkM(this)"></div><div class="chk-label">Moldes de silicona para gomitas (1 vez, dura años)</div></div>
+      <div class="chk-item"><div class="chk-box" onclick="chkM(this)"></div><div class="chk-label">Papel manteca (para freezar fajitas y pan en rodajas)</div></div>
+      <div class="chk-item"><div class="chk-box" onclick="chkM(this)"></div><div class="chk-label">Frascos de vidrio con tapa (para fermentos y untables)</div></div>
+      <div class="chk-item"><div class="chk-box" onclick="chkM(this)"></div><div class="chk-label">⭐ Levadura nutricional enriquecida con B12 (para rawmesan + fideos)</div></div>
+      <div class="chk-item"><div class="chk-box" onclick="chkM(this)"></div><div class="chk-label">Quinoa en copos precocida (para barritas + albóndigas)</div></div>
+      <div class="chk-item"><div class="chk-box" onclick="chkM(this)"></div><div class="chk-label">Fideos de legumbres (lentejas o garbanzos — leer ingredientes: solo legumbre + agua)</div></div>
+      <div class="chk-item"><div class="chk-box" onclick="chkM(this)"></div><div class="chk-label">Aceite de oliva EV condimentado para freezar (oliva + ajo + hierbas → cubetera)</div></div>
+    </div>
+
+    <div class="card" style="margin-top:16px"><div class="cband"></div><div class="c-body" style="padding-top:10px">
+      <div id="prog-text-m" style="font-size:13px;color:var(--muted);margin-bottom:7px">Tildá lo que ya tenés</div>
+      <div class="prog-bar"><div class="prog-fill" id="prog-fill-m" style="width:0%"></div></div>
+    </div></div>
+    <button onclick="resetShop('m')" style="width:100%;margin-top:8px;padding:10px;border-radius:12px;border:2px solid var(--g5);background:white;color:var(--muted);font-family:'Plus Jakarta Sans',sans-serif;font-size:12px;cursor:pointer;">🔄 Resetear lista mensual</button>
+  </div>
+</div>
+
+<!-- ══ BATCH COOKING ══ -->
+<div id="page-batch" class="page">
+  <div class="big-title">Batch Cooking</div>
+  <div class="big-sub">Tildá lo que ya tenés listo esta semana</div>
+
+  <div class="alert g"><strong>El principio TDAH:</strong> Cargás los electrodomésticos uno a uno y se cocinan solos en paralelo. Vos solo intervenís al principio y al dividir al final.</div>
+
+  <div class="batch-tabs">
+    <button class="batch-tab active" onclick="showBatch('semanal',this)">📅 Semanal</button>
+    <button class="batch-tab" onclick="showBatch('snacks',this)">🍬 Snacks</button>
+    <button class="batch-tab" onclick="showBatch('fermentos',this)">🫙 Fermentos</button>
+    <button class="batch-tab" onclick="showBatch('cubitos',this)">🧊 Cubitos</button>
+    <button class="batch-tab" onclick="showBatch('mensual',this)">📦 Mensual</button>
+    <button class="batch-tab" onclick="showBatch('electros',this)">🔌 Electros</button>
+  </div>
+
+  <!-- ══ SEMANAL ══ -->
+  <div id="batch-semanal" class="batch-sec active">
+
+    <div class="summary-grid">
+      <div class="sum-card"><div class="sum-num">~20</div><div class="sum-label">minutos activos</div></div>
+      <div class="sum-card"><div class="sum-num">7</div><div class="sum-label">días sin cocinar</div></div>
+      <div class="sum-card"><div class="sum-num">1</div><div class="sum-label">decisión por día</div></div>
+      <div class="sum-card"><div class="sum-num">0</div><div class="sum-label">cocción diaria</div></div>
+    </div>
+
+    <div class="sec-hdr"><div class="sec-dot"></div><div class="sec-ttl">Todo en paralelo — orden exacto</div></div>
+
+    <div class="timeline">
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-header">
+            <span class="tl-min start">MIN 0</span>
+            <span class="tl-name">🫘 Garbanzos — olla a presión</span>
+            <div class="bc-check" onclick="toggleBC(this)" title="Marcar como listo"></div>
+          </div>
+          <div class="tl-desc">Con remojo 12-24hs previo: 15 min en Alta Presión. Sin remojo: 35 min. Agua hasta cubrir + ajo + sal + laurel → apretar → olvidar. Base de hummus, viandas y provenzal.</div>
+          <span class="tl-electro">🔌 Olla CUK by Gadnic 1000W — Alta Presión</span>
+          <div class="tl-result">⏱ 15-35 min sola → 3 tupperes en heladera → almidón resistente al enfriar 4hs</div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot parallel"></div>
+        <div class="tl-card">
+          <div class="tl-header">
+            <span class="tl-min parallel">MIN 0 — PARALELO o siguiente tanda</span>
+            <span class="tl-name">🫘 Lentejas — olla a presión</span>
+            <div class="bc-check" onclick="toggleBC(this)" title="Marcar como listo"></div>
+          </div>
+          <div class="tl-desc">Con remojo 12hs: 8-10 min en Alta Presión. Sin remojo: 15 min. Las lentejas rojas o turcas NO necesitan remojo y se hacen en 10 min. Agua hasta cubrir + comino + cúrcuma + sal → apretar → olvidar. Base de paté, fajitas, galletitas y sopas.</div>
+          <span class="tl-electro">🔌 Olla CUK by Gadnic 1000W — Alta Presión</span>
+          <div class="tl-result">⏱ 10-15 min sola → 2 tupperes en heladera → paté, fajitas y galletitas de la semana</div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot parallel"></div>
+        <div class="tl-card">
+          <div class="tl-header">
+            <span class="tl-min parallel">MIN 0 — PARALELO o siguiente tanda</span>
+            <span class="tl-name">🫘 Porotos — olla a presión (función Porotos)</span>
+            <div class="bc-check" onclick="toggleBC(this)" title="Marcar como listo"></div>
+          </div>
+          <div class="tl-desc">Porotos negros, mung o alubia. Remojo obligatorio 8-12hs. Con remojo: 20-25 min en función Porotos o Alta Presión. Sin remojo: 35-40 min. Agua hasta cubrir + ajo + sal + laurel + opcional jengibre → apretar → olvidar. Para arroz con porotos, ensaladas y guisos.</div>
+          <span class="tl-electro">🔌 Olla CUK by Gadnic — función Porotos o Alta Presión</span>
+          <div class="tl-result">⏱ 20-40 min sola → 2 tupperes en heladera → almidón resistente al enfriar</div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-card" style="background:var(--g6);border:1px solid var(--g5)">
+          <div class="tl-header">
+            <span class="tl-min start">GUÍA RÁPIDA</span>
+            <span class="tl-name">⏱ Tiempos de cocción en olla a presión</span>
+          </div>
+          <div style="overflow-x:auto">
+            <table style="width:100%;border-collapse:collapse;font-size:12px;margin-top:8px">
+              <tr style="background:var(--g2);color:white">
+                <th style="padding:6px 8px;text-align:left">Legumbre</th>
+                <th style="padding:6px 8px">Con remojo</th>
+                <th style="padding:6px 8px">Sin remojo</th>
+                <th style="padding:6px 8px;text-align:left">Usos principales</th>
+              </tr>
+              <tr><td style="padding:6px 8px;border-bottom:1px solid var(--g5)">Garbanzos</td><td style="padding:6px 8px;text-align:center;border-bottom:1px solid var(--g5)">15 min</td><td style="padding:6px 8px;text-align:center;border-bottom:1px solid var(--g5)">35 min</td><td style="padding:6px 8px;border-bottom:1px solid var(--g5)">Hummus, viandas, provenzal, crocantes</td></tr>
+              <tr style="background:var(--g6)"><td style="padding:6px 8px;border-bottom:1px solid var(--g5)">Lentejas verdes/negras</td><td style="padding:6px 8px;text-align:center;border-bottom:1px solid var(--g5)">8 min</td><td style="padding:6px 8px;text-align:center;border-bottom:1px solid var(--g5)">15 min</td><td style="padding:6px 8px;border-bottom:1px solid var(--g5)">Paté, fajitas, sopa, ensaladas</td></tr>
+              <tr><td style="padding:6px 8px;border-bottom:1px solid var(--g5)">Lentejas rojas/turcas</td><td style="padding:6px 8px;text-align:center;border-bottom:1px solid var(--g5)">No necesitan</td><td style="padding:6px 8px;text-align:center;border-bottom:1px solid var(--g5)">10 min</td><td style="padding:6px 8px;border-bottom:1px solid var(--g5)">Galletitas, dosas, sopas cremosas</td></tr>
+              <tr style="background:var(--g6)"><td style="padding:6px 8px;border-bottom:1px solid var(--g5)">Porotos negros</td><td style="padding:6px 8px;text-align:center;border-bottom:1px solid var(--g5)">20 min</td><td style="padding:6px 8px;text-align:center;border-bottom:1px solid var(--g5)">40 min</td><td style="padding:6px 8px;border-bottom:1px solid var(--g5)">Arroz con porotos, guisos, tacos</td></tr>
+              <tr><td style="padding:6px 8px;border-bottom:1px solid var(--g5)">Porotos mung</td><td style="padding:6px 8px;text-align:center;border-bottom:1px solid var(--g5)">8 min</td><td style="padding:6px 8px;text-align:center;border-bottom:1px solid var(--g5)">15 min</td><td style="padding:6px 8px;border-bottom:1px solid var(--g5)">Ensaladas, germinados, sopas</td></tr>
+              <tr style="background:var(--g6)"><td style="padding:6px 8px">Porotos alubia</td><td style="padding:6px 8px;text-align:center">25 min</td><td style="padding:6px 8px;text-align:center">40 min</td><td style="padding:6px 8px">Guisos, ensalada rusa, stews</td></tr>
+            </table>
+          </div>
+          <div style="background:var(--a5);border-radius:8px;padding:8px 10px;font-size:11px;color:#5a3000;margin-top:8px">⚠️ Siempre llenar la olla máximo 2/3 de su capacidad con legumbres + agua. Al abrir esperar que baje la presión sola o usar la válvula de liberación rápida.</div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot parallel"></div>
+        <div class="tl-card">
+          <div class="tl-header">
+            <span class="tl-min parallel">MIN 2 — PARALELO</span>
+            <span class="tl-name">🍞 Pan de garbanzos — horno de pan</span>
+            <div class="bc-check" onclick="toggleBC(this)" title="Marcar como listo"></div>
+          </div>
+          <div class="tl-desc">400g harina garbanzos + 7g levadura seca activada en agua tibia + 280ml agua + 2 cdas oliva EV + 1 cdita sal + 2 cdas chía hidratada + 2 cdas semillas molidas + cúrcuma → cargar → programa básico → olvidar.</div>
+          <span class="tl-electro">🔌 Horno de pan</span>
+          <div class="tl-result">⏱ 60 min solo → cortar en rodajas + papel manteca → freezer</div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot parallel"></div>
+        <div class="tl-card">
+          <div class="tl-header">
+            <span class="tl-min parallel">MIN 4 — PARALELO</span>
+            <span class="tl-name">🍲 Sopa para 2 cenas — soupmaker</span>
+            <div class="bc-check" onclick="toggleBC(this)" title="Marcar como listo"></div>
+          </div>
+          <div class="tl-desc">Zapallo o zanahoria en trozos + ajo + cubito de jengibre del freezer + cúrcuma + pimienta negra + sal + 400ml agua. Opcional: lata de leche de coco para cremosidad.</div>
+          <span class="tl-electro">🔌 Soupmaker</span>
+          <div class="tl-result">⏱ 20 min solo → 2 tupperes en heladera → 2 cenas resueltas</div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot parallel"></div>
+        <div class="tl-card">
+          <div class="tl-header">
+            <span class="tl-min parallel">MIN 6 — PARALELO</span>
+            <span class="tl-name">🫐 Yogur de coco — yogurtera</span>
+            <div class="bc-check" onclick="toggleBC(this)" title="Marcar como listo"></div>
+          </div>
+          <div class="tl-desc">1-2 latas leche de coco + 1 cápsula probióticos o 2 cdas yogur de coco sin endulzar como starter → mezclar → vasitos → yogurtera → olvidar.</div>
+          <span class="tl-electro">🔌 Yogurtera Daewoo</span>
+          <div class="tl-result">⏱ 8-12hs sola → listo mañana → heladera 1 semana</div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-header">
+            <span class="tl-min start">MIN 8</span>
+            <span class="tl-name">🥕 Verduras ralladas y cortadas</span>
+            <div class="bc-check" onclick="toggleBC(this)" title="Marcar como listo"></div>
+          </div>
+          <div class="tl-desc">Zanahoria + remolacha → rayador eléctrico (30 seg cada una). Lechuga → lavar + papel absorbente en tupper. Tomates cherry → bowl. Pepino → rodajas. Zapallo extra → cubos para próxima sopa.</div>
+          <span class="tl-electro">🔌 Rayador eléctrico</span>
+          <div class="tl-result">⏱ 10 min activos → viandas y ensaladas de toda la semana</div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-header">
+            <span class="tl-min start">MIN 18</span>
+            <span class="tl-name">🌱 Semillas molidas — frasco semanal</span>
+            <div class="bc-check" onclick="toggleBC(this)" title="Marcar como listo"></div>
+          </div>
+          <div class="tl-desc">Chía + lino + sésamo + calabaza → molinillo 10 seg cada una → mezclar en frasco con cacao amargo. Cerrar. Heladera. Dura 10-15 días. Dejar el frasco VISIBLE al lado del desayuno.</div>
+          <span class="tl-electro">🔌 Molinillo de acero</span>
+          <div class="tl-result">⏱ 5 min → 1 cda en cada comida toda la semana = omega 3 cubierto</div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-header">
+            <span class="tl-min start">MIN 23</span>
+            <span class="tl-name">🧄 Hummus o paté — picadora</span>
+            <div class="bc-check" onclick="toggleBC(this)" title="Marcar como listo"></div>
+          </div>
+          <div class="tl-desc">1 lata garbanzos enjuagados + ajo crudo + limón + oliva EV + sal + agua c/n → picadora Daewoo 2 min → frasco vidrio en heladera. Variante: agregar remolacha cruda rallada → hummus de remolacha.</div>
+          <span class="tl-electro">🔌 Picadora Daewoo 500W</span>
+          <div class="tl-result">⏱ 5 min → dura 1 semana → untable para viandas y cenas</div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot parallel"></div>
+        <div class="tl-card">
+          <div class="tl-header">
+            <span class="tl-min parallel">CUANDO LA OLLA TERMINA</span>
+            <span class="tl-name">🧆 Garbanzos crocantes — airfryer</span>
+            <div class="bc-check" onclick="toggleBC(this)" title="Marcar como listo"></div>
+          </div>
+          <div class="tl-desc">Separar 1 taza garbanzos cocidos. Secar MUY bien con papel (clave para el crocante). Mezclar con cúrcuma + pimentón ahumado + comino + oliva + sal. Airfryer 200° 15 min agitando a mitad.</div>
+          <span class="tl-electro">🔌 Airfryer</span>
+          <div class="tl-result">⏱ 15 min sola → snack crocante 3 días en frasco abierto (temperatura ambiente)</div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-header">
+            <span class="tl-min start">AL FINALIZAR</span>
+            <span class="tl-name">🫘 Dividir legumbres en tupperes</span>
+            <div class="bc-check" onclick="toggleBC(this)" title="Marcar como listo"></div>
+          </div>
+          <div class="tl-desc">Garbanzos en 3 tupperes → heladera para enfriar 4hs mínimo (almidón resistente se activa al enfriar). 1 tupperware adelante para esta semana, los otros atrás.</div>
+          <span class="tl-electro">Sin electro — 5 min manuales</span>
+          <div class="tl-result">⏱ 5 min → base de toda la semana lista y fría</div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot parallel"></div>
+        <div class="tl-card">
+          <div class="tl-header">
+            <span class="tl-min parallel">PARALELO — fajitas para el freezer</span>
+            <span class="tl-name">🫓 Fajitas de legumbres — sandwichera</span>
+            <div class="bc-check" onclick="toggleBC(this)" title="Marcar como listo"></div>
+          </div>
+          <div class="tl-desc">Licuar 1 taza legumbres cocidas + 1 taza agua + 1/2 taza harina garbanzos + cúrcuma + comino + sal. Sandwichera eléctrica de a 2 (3 min, sin dar vuelta). Enfriar completamente. Papel manteca entre cada una. Freezer.</div>
+          <span class="tl-electro">🔌 Sandwichera eléctrica</span>
+          <div class="tl-result">⏱ 20 min activos → 6-8 fajitas → freezer 6 meses → vianda B de toda la semana</div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-header">
+            <span class="tl-min start">5 MIN — siempre</span>
+            <span class="tl-name">🌰 Bolsita de la cartera</span>
+            <div class="bc-check" onclick="toggleBC(this)" title="Marcar como listo"></div>
+          </div>
+          <div class="tl-desc">Bolsita pequeña o tupper mini: 10 castañas de cajú + 5 nueces + 1 cuadradito chocolate 70-80%. En la cartera o en el local. Sin heladera, sin preparación, sin decisión. Renovar cada semana.</div>
+          <span class="tl-electro">Sin electro — 2 minutos manuales</span>
+          <div class="tl-result">⏱ Media mañana (11hs) y merienda (17hs) resueltas toda la semana</div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot done"></div>
+        <div class="tl-card" style="border:2px solid var(--g3)">
+          <div class="tl-header">
+            <span class="tl-min finish">RESULTADO</span>
+            <span class="tl-name">✅ Heladera, freezer y cartera completos</span>
+          </div>
+          <div class="tl-desc">Legumbres · Sopa x2 · Hummus · Verduras · Semillas · Garbanzos crocantes · Yogur (mañana) · Pan en freezer · Fajitas en freezer · Bolsita en la cartera</div>
+          <div class="tl-result">🌿 Toda la semana sin cocinar nada desde cero</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div style="background:var(--g1);border-radius:var(--radius);padding:20px;margin-top:16px;text-align:center">
+      <div style="font-family:'Fraunces',serif;font-size:18px;color:white;margin-bottom:6px;line-height:1.3">"El objetivo no es organizarse mejor.<br>Es necesitar organizarse menos."</div>
+      <div style="font-size:11px;color:var(--g4);font-style:italic">Diseñado para cerebros TDAH · @nutricion.sonia</div>
+    </div>
+
+  </div>
+
+  <!-- ══ SNACKS ══ -->
+  <div id="batch-snacks" class="batch-sec">
+    <div class="alert g"><strong>Hacer el domingo o cuando tenés energía.</strong> Con estos 5 snacks en la heladera nunca vas a buscar algo procesado.</div>
+
+    <div class="timeline">
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-header">
+            <span class="tl-min start">10 MIN</span>
+            <span class="tl-name">🟠 Trufas de zanahoria</span>
+            <div class="bc-check" onclick="toggleBC(this)" title="Marcar como listo"></div>
+          </div>
+          <div class="tl-desc">Rallar 2 zanahorias con rayador eléctrico (2 min). Procesar en picadora con 2 cdas pasas + 6 cdas semillas molidas (3 chía + 3 sésamo) + 1 cda cacao amargo + opcional ralladura de naranja. Armar 10-12 bolitas. Bañar en coco rallado.</div>
+          <span class="tl-electro">🔌 Rayador + Picadora Daewoo</span>
+          <div class="tl-result">⏱ Heladera 4 días · Freezer 3 meses → snack media mañana y merienda</div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-header">
+            <span class="tl-min start">10 MIN</span>
+            <span class="tl-name">🟤 Trufas de dátiles y cacao</span>
+            <div class="bc-check" onclick="toggleBC(this)" title="Marcar como listo"></div>
+          </div>
+          <div class="tl-desc">Procesar en picadora: 12-14 dátiles sin carozo + 2 cdas cacao amargo + 2 cdas semillas molidas + pizca de sal marina + opcional 1 cda pasta de maní. Si queda seco: 1 cda agua. Armar bolitas. Heladera o freezer.</div>
+          <span class="tl-electro">🔌 Picadora Daewoo</span>
+          <div class="tl-result">⏱ Heladera 1 semana · Freezer 3 meses → reemplaza el chocolate con leche</div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-header">
+            <span class="tl-min start">15 MIN</span>
+            <span class="tl-name">🍪 Galletitas de lentejas + coco + dátiles</span>
+            <div class="bc-check" onclick="toggleBC(this)" title="Marcar como listo"></div>
+          </div>
+          <div class="tl-desc">Procesar: 1 taza lentejas turcas cocidas (previo remojo 12hs) + 8 dátiles rehidratados + 1/2 taza coco rallado + opcional 1 cda cacao amargo + cdita canela. Opción A — sin horno: bolitas → heladera 30 min. Opción B — con horno: placa aceitada → horno Winco 180° 10-12 min.</div>
+          <span class="tl-electro">🔌 Picadora Daewoo + Horno eléctrico Winco</span>
+          <div class="tl-result">⏱ Heladera 5 días · Freezer 3 meses → 12-15 galletitas</div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-header">
+            <span class="tl-min start">35 MIN</span>
+            <span class="tl-name">🍫 Brownie de remolacha</span>
+            <div class="bc-check" onclick="toggleBC(this)" title="Marcar como listo"></div>
+          </div>
+          <div class="tl-desc">Hervir 3 remolachas medianas hasta tiernas (20 min). Procesar con minipimer: remolachas + 1/3 taza pasas + 2 cdas chía molida + 60ml agua + 2 cdas oliva EV. Agregar: 1 cda cacao amargo + 1 cdita bicarbonato + 1 taza harina garbanzos + opcional vainilla. Fuente aceitada → horno Winco 180° 25 min.</div>
+          <span class="tl-electro">🔌 Minipimer Daewoo + Horno eléctrico Winco</span>
+          <div class="tl-result">⏱ Heladera 1 semana · Freezer 2 meses → postre y snack sin azúcar, sin gluten</div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-header">
+            <span class="tl-min start">20 MIN</span>
+            <span class="tl-name">🌾 Alfajores de semillas</span>
+            <div class="bc-check" onclick="toggleBC(this)" title="Marcar como listo"></div>
+          </div>
+          <div class="tl-desc">TAPAS: procesar 1 taza semillas molidas (chía+lino+sésamo+calabaza) + 1/2 taza harina garbanzos + 4 dátiles + 2 cdas oliva + pizca sal → masa → bolitas → aplastar → horno Winco 170° 12 min → enfriar. RELLENO: pasta de dátiles procesada con cacao amargo. Unir tapas frías con el relleno.</div>
+          <span class="tl-electro">🔌 Picadora Daewoo + Horno eléctrico Winco</span>
+          <div class="tl-result">⏱ Heladera 5 días · Freezer 3 meses → reemplaza el alfajor de maicena</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ══ FERMENTOS ══ -->
+  <div id="batch-fermentos" class="batch-sec">
+    <div class="alert g"><strong>Los fermentos se hacen solos.</strong> Vos solo cargás y esperás. El chucrut y el kéfir duran semanas — hacerlos 1 vez cada 2-3 semanas.</div>
+
+    <div class="timeline">
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-header">
+            <span class="tl-min start">6 MIN activos · 8-12hs solo</span>
+            <span class="tl-name">🫐 Yogur de coco — yogurtera</span>
+            <div class="bc-check" onclick="toggleBC(this)" title="Marcar como listo"></div>
+          </div>
+          <div class="tl-desc">1-2 latas leche de coco (400-800ml) + 1 cápsula probióticos abierta o 2 cdas yogur starter → mezclar bien → volcar en vasitos de yogurtera → apretar → olvidar 8-12hs.</div>
+          <span class="tl-electro">🔌 Yogurtera Daewoo</span>
+          <div class="tl-result">⏱ Heladera 1 semana → desayunos y meriendas probióticas</div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-header">
+            <span class="tl-min start">5 MIN activos · 24-48hs solo</span>
+            <span class="tl-name">💧 Kéfir de agua</span>
+            <div class="bc-check" onclick="toggleBC(this)" title="Marcar como listo"></div>
+          </div>
+          <div class="tl-desc">Nódulos de kéfir + 1 litro agua filtrada + 3-4 cdas azúcar mascabo + 1 higo seco o dátil → frasco de vidrio → tapar con tela → 24-48hs temperatura ambiente → colar → heladera. Los nódulos se reusan indefinidamente.</div>
+          <span class="tl-electro">Sin electro — frasco de vidrio</span>
+          <div class="tl-result">⏱ Heladera 2 semanas · Hacer cada 2-3 semanas → 1 vaso entre comidas</div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-header">
+            <span class="tl-min start">15 MIN activos · 2-6 semanas solo</span>
+            <span class="tl-name">🥬 Chucrut casero</span>
+            <div class="bc-check" onclick="toggleBC(this)" title="Marcar como listo"></div>
+          </div>
+          <div class="tl-desc">1 kg repollo cortado fino + 20g sal marina (2% del peso — pesar con balanza) → masajear 5-10 min hasta que suelte líquido → prensar en frasco de vidrio → el líquido debe cubrir el repollo → peso encima → tela (NO hermético) → temperatura ambiente 2-6 semanas → cuando esté ácido a gusto → tapa hermética → heladera.</div>
+          <span class="tl-electro">Sin electro — frasco de vidrio grande</span>
+          <div class="tl-result">⏱ Heladera meses → 2-3 cdas con almuerzo o cena 3-4x semana</div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-header">
+            <span class="tl-min start">15 MIN activos · 2hs heladera</span>
+            <span class="tl-name">🍬 Gomitas de psyllium + frutos rojos</span>
+            <div class="bc-check" onclick="toggleBC(this)" title="Marcar como listo"></div>
+          </div>
+          <div class="tl-desc">Procesar 1 taza frutos rojos hasta puré. Mezclar con 1 cda psyllium en polvo + 1 cdita limón + 1 cdita chía molida. Reposar 10-15 min hasta que espese con textura gelatinosa. Volcar en moldes de silicona o fuente cuadrada. Heladera 2hs mínimo. Desmoldar y cortar en cubos.</div>
+          <span class="tl-electro">🔌 Licuadora o Minipimer</span>
+          <div class="tl-result">⏱ Sin cocción → 100% antioxidantes conservados → heladera 1 semana</div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-header">
+            <span class="tl-min start">20 MIN activos · 1-3 meses solo</span>
+            <span class="tl-name">🍎 Vinagre de manzana con madre</span>
+            <div class="bc-check" onclick="toggleBC(this)" title="Marcar como listo"></div>
+          </div>
+          <div class="tl-desc">ETAPA 1 (1-3 semanas): manzanas orgánicas cortadas con cáscara en frasco → agua azucarada → tela → remover 1-2x semana → cuando huela a sidra colar. ETAPA 2 (3-6 semanas): líquido + 200ml vinagre iniciador → tela → cuando tenga acidez deseada → embotellar.</div>
+          <span class="tl-electro">Sin electro — frascos de vidrio</span>
+          <div class="tl-result">⏱ 1 cda en agua antes de cada comida principal → mejora sensibilidad a la insulina</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ══ CUBITOS ══ -->
+  <div id="batch-cubitos" class="batch-sec">
+    <div class="alert g"><strong>Preparar 1 vez al mes → tener condimentos instantáneos para 30 días.</strong> Cada cubito va directo a la sartén, sopa o vaso sin descongelar.</div>
+
+    <div class="timeline">
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-header">
+            <span class="tl-min start">5 MIN</span>
+            <span class="tl-name">🫚 Cubitos de jengibre</span>
+            <div class="bc-check" onclick="toggleBC(this)" title="Marcar como listo"></div>
+          </div>
+          <div class="tl-desc">200g jengibre fresco pelado → procesar en picadora o licuadora con poca agua hasta pasta → cubetera → freezer. Cuando estén sólidos → bolsa rotulada → freezer. 1 cubito = 1 trozo de jengibre fresco.</div>
+          <span class="tl-electro">🔌 Picadora Daewoo o Juguera</span>
+          <div class="tl-result">⏱ Freezer 3 meses → directo al soupmaker, infusiones, smoothies y limonadas</div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-header">
+            <span class="tl-min start">3 MIN</span>
+            <span class="tl-name">💛 Cubitos de cúrcuma + aceite de coco</span>
+            <div class="bc-check" onclick="toggleBC(this)" title="Marcar como listo"></div>
+          </div>
+          <div class="tl-desc">Derretir 3-4 cdas aceite de coco a temperatura ambiente o baño maría. Mezclar con 2 cdas cúrcuma + 1 cdita pimienta negra (activa la curcumina x20). Volcar en cubetera. Freezer hasta sólido. Bolsa rotulada.</div>
+          <span class="tl-electro">Sin electro</span>
+          <div class="tl-result">⏱ Freezer 3 meses → 1 cubito al final de sopas, guisos o salteados</div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-header">
+            <span class="tl-min start">3 MIN</span>
+            <span class="tl-name">🧄 Cubitos de ajo + oliva EV</span>
+            <div class="bc-check" onclick="toggleBC(this)" title="Marcar como listo"></div>
+          </div>
+          <div class="tl-desc">1 cabeza de ajo entera pelada → picar fino o procesar en la picadora. Mezclar con oliva EV hasta cubrir. Cubetera. Freezer. Bolsa rotulada. 1 cubito = base de cualquier salteado o sopa.</div>
+          <span class="tl-electro">🔌 Picadora Daewoo</span>
+          <div class="tl-result">⏱ Freezer 3 meses → base de salteados, sopas, aliños y tostadas</div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-header">
+            <span class="tl-min start">15 MIN</span>
+            <span class="tl-name">🫑 Cubitos de sofrito (cebolla + morrón + ajo)</span>
+            <div class="bc-check" onclick="toggleBC(this)" title="Marcar como listo"></div>
+          </div>
+          <div class="tl-desc">Picar fino 3 cebollas + 2 morrones + 6 dientes ajo. Saltear en oliva EV a fuego medio hasta muy tiernos y ligeramente dorados (12-15 min). Condimentar con cúrcuma + pimienta + sal. Enfriar completamente. Cubetera. Freezer. Bolsa rotulada.</div>
+          <span class="tl-electro">🔌 Horno eléctrico o sartén</span>
+          <div class="tl-result">⏱ Freezer 3 meses → base instantánea para tortillas, rellenos, salsas y tartas</div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-header">
+            <span class="tl-min start">5 MIN</span>
+            <span class="tl-name">🟡 Cubitos de caldo antiinflamatorio</span>
+            <div class="bc-check" onclick="toggleBC(this)" title="Marcar como listo"></div>
+          </div>
+          <div class="tl-desc">Mezclar en bol: 2 cdas cúrcuma + 1 cdita pimienta negra + 1 cda semillas de calabaza molidas + 1 cda levadura nutricional + 1 cdita sal marina + 2 cdas oliva EV + agua caliente hasta pasta. Cubetera. Freezer. 1 cubito disuelto en agua caliente = caldo antiinflamatorio instantáneo.</div>
+          <span class="tl-electro">Sin electro</span>
+          <div class="tl-result">⏱ Freezer 3 meses → caldo instantáneo para sopas, arroces y guisos</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ══ MENSUAL ══ -->
+  <div id="batch-mensual" class="batch-sec">
+    <div class="alert g"><strong>Una tarde al mes (2 horas) → freezer completo por 3-6 meses.</strong> Cuando está hecho, el batch semanal tarda 15 minutos.</div>
+
+    <div class="timeline">
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-header">
+            <span class="tl-min start">PASO 1 — 10 MIN activos</span>
+            <span class="tl-name">🫘 Legumbres en cantidad</span>
+            <div class="bc-check" onclick="toggleBC(this)" title="Marcar como listo"></div>
+          </div>
+          <div class="tl-desc">Remojar 1kg garbanzos + 500g lentejas la noche anterior. Olla a presión con garbanzos (35 min). Mientras: lentejas en olla común (20 min). Dividir en porciones de 200g en bolsitas. Rotular con fecha y tipo. Freezer.</div>
+          <div class="tl-result">⏱ 15-20 porciones → 6 meses en freezer</div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot parallel"></div>
+        <div class="tl-card">
+          <div class="tl-header">
+            <span class="tl-min parallel">PARALELO — 20 MIN activos</span>
+            <span class="tl-name">🫓 Fajitas en cantidad</span>
+            <div class="bc-check" onclick="toggleBC(this)" title="Marcar como listo"></div>
+          </div>
+          <div class="tl-desc">Licuar legumbres cocidas + agua + harina garbanzos + cúrcuma + sal. Sandwichera eléctrica de a 2 (3 min, sin dar vuelta). Enfriar completamente. Papel manteca entre cada una. Bolsa rotulada. Freezer.</div>
+          <span class="tl-electro">🔌 Sandwichera eléctrica</span>
+          <div class="tl-result">⏱ 12-15 fajitas → 6 meses en freezer</div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot parallel"></div>
+        <div class="tl-card">
+          <div class="tl-header">
+            <span class="tl-min parallel">PARALELO — 3 MIN activos</span>
+            <span class="tl-name">🍞 Pan en rodajas</span>
+            <div class="bc-check" onclick="toggleBC(this)" title="Marcar como listo"></div>
+          </div>
+          <div class="tl-desc">1-2 tandas de pan de garbanzos en el horno de pan. Enfriar completamente. Cortar en rodajas. Separar con papel manteca. Bolsa rotulada. Freezer. 1 rodaja a la tostadora sin descongelar = 2 min.</div>
+          <span class="tl-electro">🔌 Horno de pan</span>
+          <div class="tl-result">⏱ 3 min activos + 60 min solo → desayunos y cenas de 1 mes</div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-header">
+            <span class="tl-min start">PASO 2 — 20 MIN activos</span>
+            <span class="tl-name">🧊 Todos los cubitos funcionales</span>
+            <div class="bc-check" onclick="toggleBC(this)" title="Marcar como listo"></div>
+          </div>
+          <div class="tl-desc">Preparar de una sola vez: jengibre + cúrcuma+coco + ajo+oliva + sofrito + caldo antiinflamatorio. Ver pestaña 🧊 Cubitos para cada receta. Etiquetar cada bolsa claramente.</div>
+          <div class="tl-result">⏱ 20 min activos → condimentos instantáneos para 2-3 meses</div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-header">
+            <span class="tl-min start">PASO 3 — 20 MIN activos</span>
+            <span class="tl-name">🥦 Vegetales blanqueados</span>
+            <div class="bc-check" onclick="toggleBC(this)" title="Marcar como listo"></div>
+          </div>
+          <div class="tl-desc">Brócoli, coliflor, espinaca, chauchas → cortar en porciones → agua hirviendo exactamente 1 minuto → agua fría inmediatamente (detiene la cocción, conserva el color y los nutrientes) → escurrir bien → bolsas por tipo → freezer.</div>
+          <div class="tl-result">⏱ 20 min activos → verduras listas 6 meses → directo a sopas y salteados</div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot done"></div>
+        <div class="tl-card" style="border:2px solid var(--g3)">
+          <div class="tl-header">
+            <span class="tl-min finish">FREEZER MENSUAL COMPLETO</span>
+            <span class="tl-name">🌿 Resultado</span>
+          </div>
+          <div class="tl-desc">Legumbres · Fajitas · Pan en rodajas · 5 tipos de cubitos · Verduras blanqueadas</div>
+          <div class="tl-result">Con esto listo, el batch semanal tarda solo 15 minutos.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ══ ELECTROS ══ -->
+  <div id="batch-electros" class="batch-sec">
+    <div class="alert g"><strong>Saber cuál usar para qué hace que el batch sea automático.</strong></div>
+
+    <div class="electro-map" style="margin-top:12px">
+      <div class="em-card"><span class="em-emoji">🍲</span><div class="em-name">Olla CUK by Gadnic</div><div class="em-uso">Legumbres rápidas (sin remojo 35 min), arroz yamaní, sopas, porridge. Siempre primero — arranca sola.</div><span class="em-tag">⭐ MIN 0 siempre</span></div>
+      <div class="em-card p"><span class="em-emoji">🥣</span><div class="em-name">Soupmaker</div><div class="em-uso">Sopas cremas automáticas. Tirar ingredientes y olvidar 20 min. Zapallo, zanahoria, lentejas rojas.</div><span class="em-tag">MIN 4 — paralelo</span></div>
+      <div class="em-card b"><span class="em-emoji">🌀</span><div class="em-name">Airfryer</div><div class="em-uso">Garbanzos crocantes 200° 15 min. Pollo 180° 18 min. Batata 180° 20 min. Milanesas de hongo.</div><span class="em-tag">Cuando la olla termina</span></div>
+      <div class="em-card t"><span class="em-emoji">🥄</span><div class="em-name">Minipimer Daewoo Titan</div><div class="em-uso">Sopas directo en la olla sin trasvasar. Hummus rápido. 1 solo utensilio para lavar.</div><span class="em-tag">Sopas y hummus</span></div>
+      <div class="em-card a"><span class="em-emoji">🔪</span><div class="em-name">Picadora Daewoo 500W</div><div class="em-uso">Hummus, patés, untables, trufas, galletitas, cubitos de jengibre y ajo. 2L = perfecto para batch.</div><span class="em-tag">MIN 23</span></div>
+      <div class="em-card"><span class="em-emoji">🥬</span><div class="em-name">Sandwichera eléctrica</div><div class="em-uso">Fajitas (2 a la vez, 3 min, sin dar vuelta). Pan chato. Arepas de remolacha.</div><span class="em-tag">Fajitas para freezer</span></div>
+      <div class="em-card p"><span class="em-emoji">🍞</span><div class="em-name">Horno de pan</div><div class="em-uso">Pan de garbanzos automático. Cargar, apretar, 60 min solo. Rodajas con papel manteca → freezer.</div><span class="em-tag">MIN 2 — paralelo</span></div>
+      <div class="em-card b"><span class="em-emoji">⚙️</span><div class="em-name">Molinillo de acero</div><div class="em-uso">Semillas molidas frescas. 30 seg por semilla. Moler en el momento = omega 3 vivo. Máx 10-15 días heladera.</div><span class="em-tag">MIN 18</span></div>
+      <div class="em-card t"><span class="em-emoji">🥕</span><div class="em-name">Rayador eléctrico</div><div class="em-uso">Zanahoria + remolacha en 30 seg cada una. Semana de viandas resuelta en 2 minutos totales.</div><span class="em-tag">MIN 8 — rapidísimo</span></div>
+      <div class="em-card a"><span class="em-emoji">🫐</span><div class="em-name">Yogurtera Daewoo</div><div class="em-uso">Yogur de coco probiótico. Leche de coco + probióticos → 8-12hs sola. Más potente que el comprado.</div><span class="em-tag">MIN 6 — 8-12hs sola</span></div>
+      <div class="em-card"><span class="em-emoji">🌀</span><div class="em-name">Licuadora Moulinex</div><div class="em-uso">Smoothies proteicos. Masas líquidas (fajitas, dosas). El vaso es el recipiente — 1 cosa para lavar.</div><span class="em-tag">Desayuno smoothie</span></div>
+      <div class="em-card p"><span class="em-emoji">📱</span><div class="em-name">Microondas Sansei</div><div class="em-uso">Pan de lino y huevo en 2 minutos exactos. El desayuno TDAH sin función ejecutiva.</div><span class="em-tag">2 min cada mañana</span></div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+// Batch cooking tabs
+function showBatch(name, btn) {
+  document.querySelectorAll('.batch-sec').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.batch-tab').forEach(b => {
+    b.classList.remove('active');
+    b.style.background = 'white';
+    b.style.color = 'var(--g2)';
+    b.style.borderColor = 'var(--g3)';
+  });
+  document.getElementById('batch-' + name).classList.add('active');
+  btn.classList.add('active');
+  btn.style.background = 'var(--g2)';
+  btn.style.color = 'white';
+  btn.style.borderColor = 'var(--g2)';
+}
+
+// Batch item checkboxes
+function toggleBC(el) {
+  el.classList.toggle('done');
+  const card = el.closest('.tl-card');
+  if (card) card.classList.toggle('done-card');
+}
+
+// Navigation
+function show(name) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('page-' + name).classList.add('active');
+  event.currentTarget.classList.add('active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// Collapse
+function col(btn) {
+  const body = btn.nextElementSibling;
+  btn.classList.toggle('open');
+  body.classList.toggle('open');
+}
+
+// Recipe categories
+function showCat(name, btn) {
+  const recetasPage = document.getElementById('page-recetas');
+  recetasPage.querySelectorAll('.cat-section').forEach(s => s.classList.remove('active'));
+  recetasPage.querySelectorAll('.cat-btn').forEach(b => {
+    b.classList.remove('active');
+    b.style.background = 'white';
+    b.style.color = 'var(--g2)';
+    b.style.borderColor = 'var(--g3)';
+  });
+  document.getElementById('cat-' + name).classList.add('active');
+  btn.classList.add('active');
+  btn.style.background = 'var(--g2)';
+  btn.style.color = 'white';
+  btn.style.borderColor = 'var(--g2)';
+}
+
+// Shopping
+function showShop(tipo) {
+  document.getElementById('shop-s').style.display = tipo === 's' ? 'block' : 'none';
+  document.getElementById('shop-m').style.display = tipo === 'm' ? 'block' : 'none';
+  ['s','m'].forEach(t => {
+    const btn = document.getElementById('btn-' + t);
+    btn.style.background = t === tipo ? 'var(--g2)' : 'white';
+    btn.style.color = t === tipo ? 'white' : 'var(--g2)';
+    btn.style.borderColor = t === tipo ? 'var(--g2)' : 'var(--g3)';
+  });
+}
+
+function chkS(el) { updateShop(el, 's'); }
+function chkM(el) { updateShop(el, 'm'); }
+
+function updateShop(el, tipo) {
+  el.classList.toggle('done');
+  const container = document.getElementById('shop-' + tipo);
+  const total = container.querySelectorAll('.chk-box').length;
+  const done = container.querySelectorAll('.chk-box.done').length;
+  const falta = total - done;
+  const pct = Math.round((done / total) * 100);
+  document.getElementById('prog-fill-' + tipo).style.width = pct + '%';
+  const txt = document.getElementById('prog-text-' + tipo);
+  if (falta === 0) txt.textContent = '🎉 ¡Todo completo! No necesitás comprar nada.';
+  else if (done === 0) txt.textContent = 'Tildá lo que ya tenés';
+  else txt.textContent = '✅ Tenés ' + done + ' · 🛒 Te faltan ' + falta + ' items';
+}
+
+function resetShop(tipo) {
+  document.querySelectorAll('#shop-' + tipo + ' .chk-box').forEach(b => b.classList.remove('done'));
+  document.getElementById('prog-fill-' + tipo).style.width = '0%';
+  document.getElementById('prog-text-' + tipo).textContent = 'Tildá lo que ya tenés';
+}
+</script>
+</body>
+</html>
