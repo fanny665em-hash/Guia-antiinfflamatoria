@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Guía Antiinflamatoria — Fanny</title>
+<title>Guía Antiinflamatoria —</title>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -2292,6 +2292,53 @@ function resetShop(tipo) {
   document.getElementById('prog-fill-' + tipo).style.width = '0%';
   document.getElementById('prog-text-' + tipo).textContent = 'Tildá lo que ya tenés';
 }
+  // === INICIO MEMORIA LOCAL ===
+window.addEventListener('DOMContentLoaded', () => {
+  // 1. Guardar y cargar la lista de compras
+  document.querySelectorAll('.chk-box').forEach((box, index) => {
+    if (localStorage.getItem('shop-' + index) === 'true') {
+      box.classList.add('done');
+    }
+    box.addEventListener('click', () => {
+      setTimeout(() => localStorage.setItem('shop-' + index, box.classList.contains('done')), 50);
+    });
+  });
+
+  // 2. Guardar y cargar el Batch Cooking
+  document.querySelectorAll('.bc-check').forEach((box, index) => {
+    if (localStorage.getItem('batch-' + index) === 'true') {
+      box.classList.add('done');
+      let card = box.closest('.tl-card');
+      if (card) card.classList.add('done-card');
+    }
+    box.addEventListener('click', () => {
+      setTimeout(() => localStorage.setItem('batch-' + index, box.classList.contains('done')), 50);
+    });
+  });
+
+  // 3. Actualizar barras de progreso al entrar
+  const secciones = ['always', 'inv', 'prim', 'ver', 'oto', 'm'];
+  secciones.forEach(sec => {
+    let contenedor = document.getElementById('shop-' + sec);
+    if (contenedor && typeof updateShopGen === 'function') {
+      updateShopGen(contenedor, sec);
+    }
+  });
+});
+
+// 4. Hacer que los botones "Resetear" también borren la memoria
+const resetOriginal = window.resetShopGen;
+window.resetShopGen = function(tipo) {
+  if (resetOriginal) resetOriginal(tipo);
+  let contenedor = document.getElementById('shop-' + tipo);
+  if (contenedor) {
+    let todasLasCajas = Array.from(document.querySelectorAll('.chk-box'));
+    contenedor.querySelectorAll('.chk-box').forEach(box => {
+      localStorage.setItem('shop-' + todasLasCajas.indexOf(box), 'false');
+    });
+  }
+};
+// === FIN MEMORIA LOCAL ===
 </script>
 </body>
 </html>
